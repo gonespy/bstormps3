@@ -16,7 +16,7 @@ The server has no backend at the moment, meaning some features of the Anarchy ga
 
 ## In order to use the server, you have to:
 * Run the dummy server on a PC in your home network (I plan on releasing the source code soon after more testing & cleaning up, along with instructions on how to run it)
-* Run a DNS server that can resolve the gamespy.com domain to the dummy server, while serving all other DNS requests as normal. I used maradns/deadwood. If you have a router or NAS with custom DNS features, you could just use that
+* Run a DNS server that can resolve the gamespy.com domain to the dummy server, while serving all other DNS requests as normal. I used [maradns with deadwood](http://maradns.samiam.org/). If you have a router or NAS with custom DNS features, you could just use that
 * change your PS3 network settings to set your DNS server to the one running on your PC
 
 ## What works (tested & confirmed):
