@@ -91,6 +91,8 @@ public class GPSPMultiServerThread extends Thread {
                             LOG.warn("Unrecognized message format. Message: " + clientString);
                         }
                     } else if(directive.equals("searchunique")) {
+                        // this is querying everyone on your PSN friends list one by one, by their PSN username
+                        // this is necessary in order to populate the friends list when you want to send game invites
                         Map<String, String> inputMap = NetworkUtils.parseClientLogin(clientString);
 
                         // \searchunique\\sesskey\5555\profileid\7777\ uniquenick\CSlucher818\namespaces\28\gamename\bstormps3\final\

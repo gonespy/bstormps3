@@ -73,6 +73,9 @@ public class DebugResource {
         LOG.info("REQUEST:");
         LOG.info(request);
 
+        // WARNING: the request contains an encrypted field from the PSN
+        // don't expose this - if it was brute-force decrypted, who knows what the raw data might contain?
+
         Map<String,String> soapData = new LinkedHashMap<>();
         soapData.put("responseCode", "0");
         soapData.put("authToken", DUMMY_AUTH_TOKEN);

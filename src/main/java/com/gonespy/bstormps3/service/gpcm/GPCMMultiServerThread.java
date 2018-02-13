@@ -70,13 +70,13 @@ public class GPCMMultiServerThread extends Thread {
                     } else if(directive.equals("login")) {
 
                         // request should look like:
-                        // \login\\challenge\l0OtMmxlm2pPSy5ra4lynHSMB2Qbci7M\authtoken\11111111111111111111111111111111\partnerid\19\response\d3e1370bf11b79770e2dc6b36cecfb6a\port\6500\productid\12999\gamename\bstormps3\namespaceid\28\sdkrevision\59\quiet\0\id\1\final\
+                        // \login\\challenge\l0OtMmxlm2pPSy5ra4lynHSMB2Qbci7M\authtoken\1111\partnerid\19\response\d3e1370bf11b79770e2dc6b36cecfb6a\port\6500\productid\12999\gamename\bstormps3\namespaceid\28\sdkrevision\59\quiet\0\id\1\final\
                         Map<String, String> inputMap = parseClientLogin(clientString);
 
                         // response should look like:
                         // \blk\0\list\\final\\bdy\0\list\\final\\lc\2\sesskey\55555555555555555555555555555555\ userid\66666666666666666666666666666666\profileid\77777777777777777777777777777777\lt\XdR2LlH69XYzk3KCPYDkTY__\proof\10504cc226cc97f1d15f8c3269407500\id\1\final\
                         final String user = inputMap.get("authtoken"); // user = authtoken for PS3 preauth
-                        final String cChal = inputMap.get("challenge");
+                        final String clientChallenge = inputMap.get("challenge");
 
                         // block list - empty
                         final String blkData = createGPEmptyListMessage("blk");
@@ -91,9 +91,9 @@ public class GPCMMultiServerThread extends Thread {
                         responseDataMap.put("userid", Strings.padEnd("", INT_AUTH_LENGTH, '6')); // int
                         responseDataMap.put("profileid", Strings.padEnd("", INT_AUTH_LENGTH, '7')); // int
                         responseDataMap.put("uniquenick", "Me"); // should be PSNID from PSN login - don't think we have any way of knowing this
-                        responseDataMap.put("lt", "XdR2LlH69XYzk3KCPYDkTY__"); // string
+                        responseDataMap.put("lt", "XdR2LlH69XYzk3KCPYDkTY__"); // string // login token - should be randomized
                         // password = partnerChallenge for PS3 preauth
-                        responseDataMap.put("proof", gsLoginProof(DUMMY_PARTNER_CHALLENGE, user, cChal, DUMMY_SERVER_CHALLENGE)); // int
+                        responseDataMap.put("proof", gsLoginProof(DUMMY_PARTNER_CHALLENGE, user, clientChallenge, DUMMY_SERVER_CHALLENGE)); // int
                         responseDataMap.put("id", "1"); // int
 
                         out.print(blkData + bdyData + createGPMessage(responseDataMap));
@@ -101,7 +101,9 @@ public class GPCMMultiServerThread extends Thread {
                     } else if(directive.equals("updatepro")) {
                         // \ updatepro\\sesskey\5555\publicmask\0\partnerid\19\final\
 
-                        /*// try sending back current user's info
+                        /*// update profile, setting publicmask=0 ? maybe making the profile invisible to the rest of
+                        // the gamespy network because it is a shadow PS account?
+                        // try sending back current user's info
                         Map<String, String> loginResponseData = new LinkedHashMap<>();
                         loginResponseData.put("pi", ""); // int
                         loginResponseData.put("profileid", Strings.padEnd("", INT_AUTH_LENGTH, '7')); // int
