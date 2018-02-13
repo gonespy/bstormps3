@@ -1,0 +1,31 @@
+server:
+  applicationConnectors:
+    - type: http
+      port: 80
+    - type: https
+      port: 443
+      keyStorePassword: password
+      keyStorePath: src/main/config/myKeyStore.jks
+      validateCerts: false
+      validatePeers: false
+      supportedProtocols: [SSLv3,TLSv1.2]
+      excludedProtocols: []
+      supportedCipherSuites: [SSL_RSA_WITH_RC4_128_MD5]
+      excludedCipherSuites: []
+  adminConnectors:
+    - type: http
+      port: 8081
+
+swagger:
+  resourcePackage: com.gonespy.bstormps3.service.debug.resources
+  contextRoot: "/gonespy"
+  schemes:
+    - https
+    - http
+
+logging:
+  level: INFO
+  appenders:
+    - type: console  
+      
+    
