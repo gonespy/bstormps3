@@ -4,8 +4,10 @@ Alternative Gamespy services for Bulletstorm on PS3.
 
 Thanks to https://github.com/nitrocaster/GameSpy for the Gamespy SDK
 
+# History
 In 2014 the Gamespy servers were shut down. Amongst the games that used these servers is the game Bulletstorm on the PS3 console. The server shutdown rendered the "Anarchy" co-operative game mode unplayable. It also meant that the PlayStation trophies that involved this game mode were no longer obtainable.
 
+# Overview
 This project is a collection of dummy Gamespy mini-services (hereafter referred to as the "server") that allows you to play the Anarchy game mode again with limited functionality. You can create private matches and play on your own without any problems. Your level/XP is stored in the PS3 game data so you can level up as before.
 
 This means that every single trophy in the game (including DLC, which is still up on the US store) is potentially earnable again.
