@@ -10,7 +10,7 @@ In 2014 the Gamespy servers were shut down. Amongst the games that used these se
 # Overview
 This project is a collection of replacement Gamespy mini-services (hereafter referred to as the *"server"*, or by the nickname *"Gonespy"*) that allows you to play the Anarchy game mode again with limited functionality. You can create private matches and play on your own without any problems. Your level/XP is stored within PS3 saved game data, so you can level up as before, unlocking weapon and character skins along the way.
 
-Fpr PlayStation trophy hunters - this means that every single trophy in the game (including DLC, which available for purchase on the US PlayStation store) is potentially earnable again.
+For PlayStation trophy hunters - this means that every single trophy in the game (including DLC, which is still available for purchase on the US PlayStation store) is potentially earnable again.
 
 As a bonus, it should be possible to have Gonespy unlock the exclusive Leash from playing the demo :)
 
