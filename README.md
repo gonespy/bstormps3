@@ -74,3 +74,10 @@ No. You still have to put in the same amount of effort to get the trophies as be
 ## Disclaimer
 You use Gonespy at your own risk. I cannot and will not be responsible for any hardware or software damage to a computer, PS3 console, networking equipment or other device, nor banning or limitations imposed on your PSN account, whilst using the Gonespy software.
 
+## Trademarks/Copyright
+
+Gamespy SDK copyright (c) 2011, IGN Entertainment, Inc. ("IGN"). All rights reserved.
+
+Bulletstorm game software copyright (c) Electronic Arts / People Can Fly. All rights reserved.
+
+PlayStation copyright (c) Sony Corporation. All rights reserved.
