@@ -41,8 +41,7 @@ The server has no backend at the moment, meaning some features of the Anarchy ga
 ## Currently untested:
 * Earning trophies
   * I am confident all trophies will be unlockable, aside from maybe the following ones:
-    * Team Player - need at least 2 people to do this one. Plus, the tracker in the Statistics for this trophy uses data from Gamespy servers - so even if you meet the requirements, it might not unlock :(
-    * Anarchy Master - this is impossible to get the required score with only one player, I believe
+    * Team Player - the "Challenges" tracker in the Statistics uses data from Gamespy servers - so even if you meet the requirements and complete 200 of them, the trophy might not unlock :(
     * The Platinum trophy, of course!
 
 ## Do you think it would be possible to fully restore Anarchy with all functionality by running the server in a public environment?
