@@ -5,7 +5,7 @@ package com.gonespy.bstormps3.service.gpsp;
  *
  */
 
-import com.gonespy.bstormps3.service.util.NetworkUtils;
+import com.gonespy.bstormps3.service.util.GPMessageUtils;
 import com.gonespy.bstormps3.service.shared.GPState;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,13 +20,13 @@ import java.util.Map;
 import static com.gonespy.bstormps3.service.shared.GPState.DONE;
 import static com.gonespy.bstormps3.service.shared.GPState.WAIT;
 
-public class GPSPMultiServerThread extends Thread {
-    private static final Logger LOG = LoggerFactory.getLogger(GPSPMultiServerThread.class);
+public class GPSPServiceThread extends Thread {
+    private static final Logger LOG = LoggerFactory.getLogger(GPSPServiceThread.class);
 
     private Socket socket;
 
-    public GPSPMultiServerThread(Socket socket) {
-        super("GPSPMultiServerThread");
+    public GPSPServiceThread(Socket socket) {
+        super("GPSPServiceThread");
         this.socket = socket;
     }
 
@@ -74,7 +74,7 @@ public class GPSPMultiServerThread extends Thread {
 
         try (
                 InputStream reader = socket.getInputStream();
-                PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+                PrintWriter out = new PrintWriter(socket.getOutputStream(), true)
         ) {
 
             while(socket.isConnected() && state != DONE) {
@@ -82,8 +82,8 @@ public class GPSPMultiServerThread extends Thread {
                 if(state == WAIT) {
                     sleep(10);
 
-                    String clientString = NetworkUtils.readGPMessage(reader);
-                    String directive = NetworkUtils.getGPDirective(clientString);
+                    String clientString = GPMessageUtils.readGPMessage(reader);
+                    String directive = GPMessageUtils.getGPDirective(clientString);
 
                     if(directive == null) {
                         if(clientString != null && clientString.length() > 0) {
@@ -93,7 +93,7 @@ public class GPSPMultiServerThread extends Thread {
                     } else if(directive.equals("searchunique")) {
                         // this is querying everyone on your PSN friends list one by one, by their PSN username
                         // this is necessary in order to populate the friends list when you want to send game invites
-                        Map<String, String> inputMap = NetworkUtils.parseClientLogin(clientString);
+                        Map<String, String> inputMap = GPMessageUtils.parseClientLogin(clientString);
 
                         // \searchunique\\sesskey\5555\profileid\7777\ uniquenick\CSlucher818\namespaces\28\gamename\bstormps3\final\
 
@@ -107,12 +107,12 @@ public class GPSPMultiServerThread extends Thread {
                         responseDataMap.put("namespaceid", inputMap.get("namespaces"));
                         responseDataMap.put("bsrdone", "");
 
-                        out.print(NetworkUtils.createGPMessage(responseDataMap));
+                        out.print(GPMessageUtils.createGPMessage(responseDataMap));
                         out.flush();
 
                     } else {
                         // directive unknown/not implemented yet
-                        String clientRequestString = NetworkUtils.readGPMessage(reader);
+                        String clientRequestString = GPMessageUtils.readGPMessage(reader);
                         if(clientRequestString != null && clientRequestString.length() > 0) {
                             LOG.info("UNKNOWN DIRECTIVE: " + clientRequestString);
                         }

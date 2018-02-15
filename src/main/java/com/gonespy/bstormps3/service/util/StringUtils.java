@@ -1,8 +1,14 @@
 package com.gonespy.bstormps3.service.util;
 
+import com.google.common.base.Strings;
+import org.apache.commons.codec.digest.DigestUtils;
+
 import java.util.Random;
 
 public abstract class StringUtils {
+
+    private static final String MD5_FILLER = Strings.padEnd("", 48, ' ');
+
     public static String asciiToHex(char[] chars) {
         StringBuilder hex = new StringBuilder();
         for (char ch : chars) {
@@ -55,6 +61,13 @@ public abstract class StringUtils {
         }
         String saltStr = salt.toString();
         return saltStr;
+    }
+
+    public static String gsLoginProof(final String password, final String user, final String clientChallenge,
+                                      final String serverChallenge) {
+        final String passwordHash = DigestUtils.md5Hex(password);
+        final String preHash = passwordHash + MD5_FILLER + user + serverChallenge + clientChallenge + passwordHash;
+        return DigestUtils.md5Hex(preHash);
     }
 
 }

@@ -8,7 +8,7 @@ import java.io.*;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-import static com.gonespy.bstormps3.service.util.NetworkUtils.readGPMessage;
+import static com.gonespy.bstormps3.service.util.GPMessageUtils.readGPMessage;
 
 public class GPCMTestClient {
     public static void main(String[] args) {

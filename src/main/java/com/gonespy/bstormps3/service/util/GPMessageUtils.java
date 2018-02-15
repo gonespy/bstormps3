@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public abstract class NetworkUtils {
+public abstract class GPMessageUtils {
 
     private static String MESSAGE_DELIMITER = "\\";
     private static String REGEX_ESCAPED_MESSAGE_DELIMITER = "\\\\";

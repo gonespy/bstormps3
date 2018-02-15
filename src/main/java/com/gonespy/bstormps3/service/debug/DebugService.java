@@ -34,8 +34,12 @@ public class DebugService extends Application<DebugServiceConfiguration> {
 		Security.setProperty("jdk.tls.legacyAlgorithms", "SSL_RSA_WITH_RC4_128_MD5");
 	}
 
-	public static void main(String[] args) throws Exception {
-		new DebugService().run(args);
+	public static void main(String[] args) {
+		try {
+			new DebugService().run(args);
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override
@@ -59,7 +63,7 @@ public class DebugService extends Application<DebugServiceConfiguration> {
 	}
 
 	@Override
-	public void run(DebugServiceConfiguration configuration, Environment environment) throws Exception {
+	public void run(DebugServiceConfiguration configuration, Environment environment) {
 
 		DebugResource debugResource = new DebugResource();
 

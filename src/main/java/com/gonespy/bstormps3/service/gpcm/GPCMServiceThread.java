@@ -4,10 +4,10 @@ package com.gonespy.bstormps3.service.gpcm;
  * Created by gonespy on 8/02/2018.
  */
 
-import com.google.common.base.Strings;
 import com.gonespy.bstormps3.service.shared.GPState;
 import com.gonespy.bstormps3.service.util.GPNetworkException;
-import org.apache.commons.codec.digest.DigestUtils;
+import com.gonespy.bstormps3.service.util.StringUtils;
+import com.google.common.base.Strings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -21,17 +21,16 @@ import java.util.Map;
 import static com.gonespy.bstormps3.service.debug.resources.DebugResource.DUMMY_PARTNER_CHALLENGE;
 import static com.gonespy.bstormps3.service.debug.resources.DebugResource.INT_AUTH_LENGTH;
 import static com.gonespy.bstormps3.service.shared.GPState.*;
-import static com.gonespy.bstormps3.service.util.NetworkUtils.*;
+import static com.gonespy.bstormps3.service.util.GPMessageUtils.*;
 
-public class GPCMMultiServerThread extends Thread {
-    private static final Logger LOG = LoggerFactory.getLogger(GPCMMultiServerThread.class);
+public class GPCMServiceThread extends Thread {
+    private static final Logger LOG = LoggerFactory.getLogger(GPCMServiceThread.class);
     private static final String DUMMY_SERVER_CHALLENGE = "ZXX7h9eiTe0EP5teW1yiajFqY5URTykw";
-    private static final String MD5_FILLER = Strings.padEnd("", 48, ' ');
 
     private Socket socket;
 
-    public GPCMMultiServerThread(Socket socket) {
-        super("GPSPMultiServerThread");
+    public GPCMServiceThread(Socket socket) {
+        super("GPSPServiceThread");
         this.socket = socket;
     }
 
@@ -93,7 +92,7 @@ public class GPCMMultiServerThread extends Thread {
                         responseDataMap.put("uniquenick", "Me"); // should be PSNID from PSN login - don't think we have any way of knowing this
                         responseDataMap.put("lt", "XdR2LlH69XYzk3KCPYDkTY__"); // string // login token - should be randomized
                         // password = partnerChallenge for PS3 preauth
-                        responseDataMap.put("proof", gsLoginProof(DUMMY_PARTNER_CHALLENGE, user, clientChallenge, DUMMY_SERVER_CHALLENGE)); // int
+                        responseDataMap.put("proof", StringUtils.gsLoginProof(DUMMY_PARTNER_CHALLENGE, user, clientChallenge, DUMMY_SERVER_CHALLENGE)); // int
                         responseDataMap.put("id", "1"); // int
 
                         out.print(blkData + bdyData + createGPMessage(responseDataMap));
@@ -145,14 +144,5 @@ public class GPCMMultiServerThread extends Thread {
             }
         }
     }
-
-    public static String gsLoginProof(final String password, final String user, final String clientChallenge,
-                                      final String serverChallenge) {
-        final String passwordHash = DigestUtils.md5Hex(password);
-        final String preHash = passwordHash + MD5_FILLER + user + serverChallenge + clientChallenge + passwordHash;
-        return DigestUtils.md5Hex(preHash);
-    }
-
-
 
 }

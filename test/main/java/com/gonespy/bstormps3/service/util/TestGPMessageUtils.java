@@ -6,9 +6,9 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 import static com.google.common.truth.Truth.assertThat;
-import static com.gonespy.bstormps3.service.util.NetworkUtils.*;
+import static com.gonespy.bstormps3.service.util.GPMessageUtils.*;
 
-public class TestNetworkUtils {
+public class TestGPMessageUtils {
 
     @Test
     public void testParseClientLogin() {

@@ -24,7 +24,7 @@ swagger:
     - http
 
 logging:
-  level: INFO
+  level: WARN
   appenders:
     - type: console  
       
