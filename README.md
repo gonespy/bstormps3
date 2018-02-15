@@ -34,6 +34,9 @@ The server has no backend at the moment, meaning some features of the Anarchy ga
 * Leaderboards
 * Statistics (some are tracked in the game, others were tracked by Gamespy so they don't show)
 * Offline Anarchy (connected to internet, but disconnected from PSN) - this didn't work before, but it was worth a shot!
+* Your PSN ID is not shown correctly in-game 
+** This doesn't break anything, it just looks weird!
+** You can customize the server to make your nickname in-game to be whatever you want!
 
 ## Currently untested:
 * Earning trophies
