@@ -19,7 +19,7 @@ The server has no backend at the moment, meaning some features of the Anarchy ga
 ## In order to use the server, you need:
 * [Java 8 or higher](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) installed on the PC that will be running Gonespy
 * a DNS server that can resolve the gamespy.com domain to your Gonespy server, while serving all other DNS requests as normal. I used [maradns with deadwood](http://maradns.samiam.org/) with the settings detailed [here](MARADNS_DEADWOOD.md). If you have a router or NAS with DNS functionality, you could use that instead
-* to let Gonespy and the DNS server through any relevant firewalls (eg. if running DNS & Gonespy on the same Windows PC, you will probably need to open a bunch of ports through Windows Firewall)
+* to let Gonespy and the DNS server through any relevant firewalls (eg. if running DNS & Gonespy on the same Windows PC, you will probably need to open a bunch of ports through Windows Firewall so your PS3 can connect)
 * to change your PS3 network settings to use your DNS server
 
 ## What works (tested & confirmed):
