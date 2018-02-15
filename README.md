@@ -23,19 +23,19 @@ The server has no backend at the moment, meaning some features of the Anarchy ga
 * to change your PS3 network settings to use your DNS server
 
 ## What works (tested & confirmed):
-* Anarchy (private matches)
-* XP/leveling
-* DLC maps
+* **Anarchy (private matches)**
+* **Multiple PS3s running the game can connect to the same Gonespy server**
+* **Inviting other people to join your private matches**
+* **XP/leveling**
+* **DLC maps**
 
 ## What doesn't work:
 * Quick Match (matchmaking)
 * Leaderboards
 * Statistics (some are tracked in the game, others were tracked by Gamespy so they don't show)
-* Offline Anarchy - connected to network, but disconnected from PSN (it asks you to log in to PSN)
+* Offline Anarchy (connected to internet, but disconnected from PSN) - this didn't work before, but it was worth a shot!
 
 ## Currently untested:
-* Inviting friends to your private match (game invites are sent, but I don't have a second copy of the game yet to test that the invites can be accepted & the game joined successfully)
-* Connecting multiple PS3s running the game to the same Gonespy server
 * Earning trophies
   * I am confident all trophies will be unlockable, aside from maybe the following ones:
     * Team Player - need at least 2 people to do this one. Plus, the tracker in the Statistics for this trophy uses data from Gamespy servers - so even if you meet the requirements, it might not unlock :(
