@@ -23,23 +23,25 @@ The server has no backend at the moment, meaning some features of the Anarchy ga
 * to change your PS3 network settings to use your DNS server
 
 ## What works (tested & confirmed):
-* Anarchy (private matches)
-* XP/leveling
-* DLC maps
+* **Anarchy (private matches)**
+* **Multiple PS3s running the game can connect to the same Gonespy server**
+* **Inviting other people to join your private matches**
+* **XP/leveling**
+* **DLC maps**
 
 ## What doesn't work:
 * Quick Match (matchmaking)
 * Leaderboards
 * Statistics (some are tracked in the game, others were tracked by Gamespy so they don't show)
-* Offline Anarchy - connected to network, but disconnected from PSN (it asks you to log in to PSN)
+* Offline Anarchy (connected to internet, but disconnected from PSN) - this didn't work before, but it was worth a shot!
+* Your PSN ID is not shown correctly in-game 
+** This doesn't break anything, it just looks weird!
+** You can customize the server to make your nickname in-game to be whatever you want!
 
 ## Currently untested:
-* Inviting friends to your private match (game invites are sent, but I don't have a second copy of the game yet to test that the invites can be accepted & the game joined successfully)
-* Connecting multiple PS3s running the game to the same Gonespy server
 * Earning trophies
   * I am confident all trophies will be unlockable, aside from maybe the following ones:
-    * Team Player - need at least 2 people to do this one. Plus, the tracker in the Statistics for this trophy uses data from Gamespy servers - so even if you meet the requirements, it might not unlock :(
-    * Anarchy Master - this is impossible to get the required score with only one player, I believe
+    * Team Player - the "Challenges" tracker in the Statistics uses data from Gamespy servers - so even if you meet the requirements and complete 200 of them, the trophy might not unlock :(
     * The Platinum trophy, of course!
 
 ## Do you think it would be possible to fully restore Anarchy with all functionality by running the server in a public environment?
@@ -71,3 +73,10 @@ No. You still have to put in the same amount of effort to get the trophies as be
 ## Disclaimer
 You use Gonespy at your own risk. I cannot and will not be responsible for any hardware or software damage to a computer, PS3 console, networking equipment or other device, nor banning or limitations imposed on your PSN account, whilst using the Gonespy software.
 
+## Trademarks/Copyright
+
+Gamespy SDK copyright (c) 2011, IGN Entertainment, Inc. ("IGN"). All rights reserved.
+
+Bulletstorm game software copyright (c) Electronic Arts / People Can Fly. All rights reserved.
+
+PlayStation copyright (c) Sony Corporation. All rights reserved.
