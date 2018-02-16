@@ -25,7 +25,13 @@ import static com.gonespy.bstormps3.service.util.GPMessageUtils.*;
 
 public class GPCMServiceThread extends Thread {
     private static final Logger LOG = LoggerFactory.getLogger(GPCMServiceThread.class);
+
     private static final String DUMMY_SERVER_CHALLENGE = "ZXX7h9eiTe0EP5teW1yiajFqY5URTykw";
+    private static final String DUMMY_SESSION_KEY = Strings.padEnd("", INT_AUTH_LENGTH, '5');
+    private static final String DUMMY_USER_ID = Strings.padEnd("", INT_AUTH_LENGTH, '6');
+    private static final String DUMMY_PROFILE_ID = Strings.padEnd("", INT_AUTH_LENGTH, '7');
+    private static final String DUMMY_LOGIN_TOKEN = "XdR2LlH69XYzk3KCPYDkTY__";
+    private static final String DUMMY_UNIQUE_NICK = "BulletstormPlayer";
 
     private Socket socket;
 
@@ -86,13 +92,13 @@ public class GPCMServiceThread extends Thread {
                         // login data
                         Map<String, String> responseDataMap = new LinkedHashMap<>();
                         responseDataMap.put("lc", "2"); // int
-                        responseDataMap.put("sesskey", Strings.padEnd("", INT_AUTH_LENGTH, '5')); // int
-                        responseDataMap.put("userid", Strings.padEnd("", INT_AUTH_LENGTH, '6')); // int
-                        responseDataMap.put("profileid", Strings.padEnd("", INT_AUTH_LENGTH, '7')); // int
-                        responseDataMap.put("uniquenick", "Me"); // should be PSNID from PSN login - don't think we have any way of knowing this
-                        responseDataMap.put("lt", "XdR2LlH69XYzk3KCPYDkTY__"); // string // login token - should be randomized
+                        responseDataMap.put("sesskey", DUMMY_SESSION_KEY); // int
+                        responseDataMap.put("userid", DUMMY_USER_ID); // int
+                        responseDataMap.put("profileid", DUMMY_PROFILE_ID); // int
+                        responseDataMap.put("uniquenick", DUMMY_UNIQUE_NICK); // should be PSNID from PSN login - don't think we have any way of knowing this
+                        responseDataMap.put("lt", DUMMY_LOGIN_TOKEN); // string // login token
                         // password = partnerChallenge for PS3 preauth
-                        responseDataMap.put("proof", StringUtils.gsLoginProof(DUMMY_PARTNER_CHALLENGE, user, clientChallenge, DUMMY_SERVER_CHALLENGE)); // int
+                        responseDataMap.put("proof", StringUtils.gsLoginProof(DUMMY_PARTNER_CHALLENGE, user, clientChallenge, DUMMY_SERVER_CHALLENGE));
                         responseDataMap.put("id", "1"); // int
 
                         out.print(blkData + bdyData + createGPMessage(responseDataMap));
