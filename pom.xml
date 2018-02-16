@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-    <groupId>com.gonespy.bstormps3</groupId>
-    <packaging>pom</packaging>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.gonespy</groupId>
+    <artifactId>bstormps3</artifactId>
+    <version>0.1</version>
 
     <scm>
         <url>https://github.com/gonespy/bstormps3</url>
@@ -10,7 +12,6 @@
         <developerConnection>scm:git:https://github.com/gonespy/bstormps3.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
-
 
     <repositories>
         <repository>
@@ -39,12 +40,8 @@
         </pluginRepository>
     </pluginRepositories>
 
-    <modelVersion>4.0.0</modelVersion>
-
-    <artifactId>bstormps3</artifactId>
-    <version>0.${minor.version}</version>
-
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <dropwizard.version>1.1.4</dropwizard.version>
         <dropwizard.metrics.version>3.2.3</dropwizard.metrics.version>
         <pact.version>3.5.12</pact.version>
@@ -71,7 +68,6 @@
             <version>1.10.19</version>
             <scope>test</scope>
         </dependency>
-
 
         <dependency>
             <groupId>io.dropwizard</groupId>
@@ -117,34 +113,29 @@
             <version>2.6</version>
         </dependency>
 
+        <!-- removing this dependency causes a bunch of warnings from DebugService -->
         <dependency>
-            <groupId>org.jmockit</groupId>
-            <artifactId>jmockit</artifactId>
-            <version>1.8</version>
-            <scope>test</scope>
+            <groupId>org.reflections</groupId>
+            <artifactId>reflections</artifactId>
+            <version>0.9.10</version>
+            <scope>compile</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.google.code.findbugs</groupId>
+                    <artifactId>annotations</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.javassist</groupId>
+                    <artifactId>javassist</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
-        <dependency>
-            <groupId>com.mashape.unirest</groupId>
-            <artifactId>unirest-java</artifactId>
-            <version>1.4.9</version>
-            <scope>test</scope>
-        </dependency>
 
     </dependencies>
 
     <build>
-        <finalName>bstormps3</finalName>
-
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-                <filtering>true</filtering>
-            </resource>
-        </resources>
-
         <plugins>
-
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.5</version>
@@ -156,6 +147,40 @@
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>2.3</version>
+                <configuration>
+                    <createDependencyReducedPom>true</createDependencyReducedPom>
+                    <filters>
+                        <filter>
+                            <artifact>*:*</artifact>
+                            <excludes>
+                                <exclude>META-INF/*.SF</exclude>
+                                <exclude>META-INF/*.DSA</exclude>
+                                <exclude>META-INF/*.RSA</exclude>
+                            </excludes>
+                        </filter>
+                    </filters>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <transformers>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <mainClass>com.gonespy.bstormps3.service.RunAllServices</mainClass>
+                                </transformer>
+                            </transformers>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.0.2</version>
                 <configuration>
@@ -163,32 +188,16 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>com.gonespy.bstormps3.service.debug.DebugService</mainClass>
+                            <mainClass>com.gonespy.bstormps3.service.RunAllServices</mainClass>
                             <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
                         </manifest>
-                        <manifestEntries>
-                            <!--<Implementation-SCM-Revision>${scm.revision}</Implementation-SCM-Revision>-->
-                        </manifestEntries>
+                        <!--<manifestEntries>
+                            <Implementation-SCM-Revision>${scm.revision}</Implementation-SCM-Revision>
+                        </manifestEntries>-->
                     </archive>
                 </configuration>
             </plugin>
 
-            <plugin>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <phase>initialize</phase>
-                        <goals>
-                            <goal>copy-dependencies</goal>
-                        </goals>
-                        <configuration>
-                            <overWriteReleases>false</overWriteReleases>
-                            <includeScope>runtime</includeScope>
-                            <outputDirectory>${project.build.directory}/lib</outputDirectory>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
 
         </plugins>
     </build>
