@@ -22,6 +22,12 @@ The server has no backend at the moment, meaning some features of the Anarchy ga
 * to let Gonespy and the DNS server through any relevant firewalls (eg. if running DNS & Gonespy on the same Windows PC, you will probably need to open a bunch of ports through Windows Firewall so your PS3 can connect)
 * to change your PS3 network settings to use your DNS server
 
+## Usage instructions
+* Download the server from [here](https://github.com/gonespy/bstormps3/raw/master/release/bstormps3-0.1.zip)
+* Extract the zip file to somewhere on your PC
+* Open a command prompt to the location you extracted to
+* run the command: ```java -jar bstormps3-01.jar```
+
 ## What works (tested & confirmed):
 * **Anarchy (private matches)**
 * **Multiple PS3s running the game can connect to the same Gonespy server**
