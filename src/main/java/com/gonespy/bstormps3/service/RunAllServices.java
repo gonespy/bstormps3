@@ -15,7 +15,7 @@ public class RunAllServices {
 
         Thread gpspServiceThread = new Thread(() -> new GPSPService().run());
 
-        Thread debugServiceThread = new Thread(() -> DebugService.main(new String[]{"server", "src/main/config/dw-config.yml"}));
+        Thread debugServiceThread = new Thread(() -> DebugService.main(new String[]{"server", "resources/dw-config.yml"}));
 
         gpcmServiceThread.start();
         availabilityServiceThread.start();
