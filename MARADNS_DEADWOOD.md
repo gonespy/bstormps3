@@ -1,4 +1,4 @@
-The following instructions assume you are running maradns & deadwood on the same Windows PC.
+The following instructions assume you are running maradns & deadwood on the same Windows PC as Gonespy.
 
 
 
@@ -20,7 +20,7 @@ You also need a file called "dns.gamespy.com" in your maradns directory, contain
 *.gamespy.net.  A		192.168.2.37 ~
 ```
 
-For deadwood, this is the dwood3rc.txt file that I used (again, replace the IP address 192.168.2.37)
+For deadwood, this is the dwood3rc.txt file that I used (replace the IP address 192.168.2.37 with that of the DNS server)
 
 ```
 upstream_servers = {}
