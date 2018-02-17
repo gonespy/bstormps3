@@ -50,6 +50,8 @@ The server has no backend at the moment, meaning some features of the Anarchy ga
     * Team Player - the "Challenges" tracker in the Statistics uses data from Gamespy servers - so even if you meet the requirements and complete 200 of them, the trophy might not unlock :(
     * The Platinum trophy, of course!
 
+# General Q&A
+
 ## Do you think it would be possible to fully restore Anarchy with all functionality by running the server in a public environment?
 I'm not sure if that would be a good idea. Gonespy is not secure, and the game sends some encrypted data from the PS network that might allow people to brute-force crack the cryto (Gamespy SDK is quite old and the crypto is weak by modern standards) and work out your PSN login password. 
 
@@ -70,16 +72,17 @@ Unlikely. The Gamespy servers do not communicate directly with the PSN in any wa
 ## Do you have to mod your PS3 to use Gonespy?
 Nope. As stated above, all you need to do is change your PS3 network settings to use a custom DNS server to trick the game into thinking that Gonespy is the real deal!
 
+# Trophy Q&A
 ## Could this get your PSN account flagged on third party trophy tracking sites like truetrophies or psnprofiles?
 Probably, at least until those sites are aware of Gonespy and accept that using it does not fall within their definitions of "cheating". Anyone who unlocks "unobtainable" trophies via this method may have their account flagged on those sites. I plan on releasing a full step-by-step guide and taking photos/video to prove that it works so that hopefully these sites will not take action against your account if you choose to use Gonespy.
 
 ## Is this cheating?
-No. You still have to put in the same amount of effort to get the trophies as before. There is nothing that the Gonespy server current does or will ever be able to do that will fast-track or immediately unlock any trophies.
+No. You still have to put in the same amount of effort to get the trophies as before. There is nothing that the Gonespy server currently does or will ever be able to do that will fast-track or immediately unlock any trophies.
 
-## Disclaimer
+# Disclaimer
 You use Gonespy at your own risk. I cannot and will not be responsible for any hardware or software damage to a computer, PS3 console, networking equipment or other device, nor banning or limitations imposed on your PSN account, whilst using the Gonespy software.
 
-## Trademarks/Copyright
+# Trademarks/Copyright
 
 Gamespy SDK copyright (c) 2011, IGN Entertainment, Inc. ("IGN"). All rights reserved.
 
