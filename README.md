@@ -35,6 +35,7 @@ The server has no backend at the moment, meaning some features of the Anarchy ga
 * **Multiple PS3s running the game can connect to the same Gonespy server**
 * **Inviting other people to join your private matches**
 * **XP/leveling**
+* **Earning trophies**
 * **DLC maps**
 
 ## What doesn't work:
@@ -47,10 +48,7 @@ The server has no backend at the moment, meaning some features of the Anarchy ga
   * You can customize the server to make your nickname in-game to be whatever you want!
 
 ## Currently untested:
-* Earning trophies
-  * I am confident all trophies will be unlockable, aside from maybe the following ones:
-    * Team Player - the "Challenges" tracker in the Statistics uses data from Gamespy servers - so even if you meet the requirements and complete 200 of them, the trophy might not unlock :(
-    * The Platinum trophy, of course!
+* Team Player trophy - the "Challenges" tracker in the Statistics uses data from Gamespy servers - so even if you meet the requirements and complete 200 of them, the trophy might not unlock :( There's no way to know until someone tries it.
 
 # General Q&A
 
