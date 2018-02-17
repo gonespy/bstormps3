@@ -23,7 +23,7 @@ The server has no backend at the moment, meaning some features of the Anarchy ga
 * to change your PS3 network settings to use your DNS server
 
 ## Usage instructions
-* Download the server from [here](https://github.com/gonespy/bstormps3/raw/master/release/bstormps3-0.1.zip)
+* Download the latest Bulletstorm Gonespy release from [here](https://github.com/gonespy/bstormps3/raw/master/release/bstormps3-0.1.zip)
 * Extract the zip file to somewhere on your PC
 * Open a command prompt to the location you extracted to
 * run the command: ```java -jar bstormps3-01.jar```
