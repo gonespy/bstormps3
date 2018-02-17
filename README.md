@@ -20,8 +20,8 @@ The server has no backend at the moment, meaning some features of the Anarchy ga
 * [Java 8 or higher](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) installed on the PC that will be running Gonespy
 * a DNS server that can resolve the gamespy.com domain to your Gonespy server, while serving all other DNS requests as normal. I used [maradns with deadwood](http://maradns.samiam.org/) with the settings detailed [here](MARADNS_DEADWOOD.md). If you have a router or NAS with DNS functionality, you could use that instead
 * to let Gonespy and the DNS server through any relevant firewalls If running DNS & Gonespy on the same Windows PC, you will probably need to open a bunch of ports through Windows Firewall so your PS3 can connect. The ports Gonespy uses are:
-** TCP: 80, 443, 29900, 29901
-** UDP: 27900
+  * TCP 80, 443, 29900, 29901
+  * UDP 27900
 * to change your PS3 network settings to use your DNS server
 
 ## Usage instructions
@@ -43,8 +43,8 @@ The server has no backend at the moment, meaning some features of the Anarchy ga
 * Statistics (some are tracked in the game, others were tracked by Gamespy so they don't show)
 * Offline Anarchy (connected to internet, but disconnected from PSN) - this didn't work before, but it was worth a shot!
 * Your PSN ID is not shown correctly in-game 
-** This doesn't break anything, it just looks weird!
-** You can customize the server to make your nickname in-game to be whatever you want!
+  * This doesn't break anything, it just looks weird!
+  * You can customize the server to make your nickname in-game to be whatever you want!
 
 ## Currently untested:
 * Earning trophies
