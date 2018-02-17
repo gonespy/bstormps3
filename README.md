@@ -43,9 +43,7 @@ The server has no backend at the moment, meaning some features of the Anarchy ga
 * Leaderboards
 * Statistics (some are tracked in the game, others were tracked by Gamespy so they don't show)
 * Offline Anarchy (connected to internet, but disconnected from PSN) - this didn't work before, but it was worth a shot!
-* Your PSN ID is not shown correctly in-game 
-  * This doesn't break anything, it just looks weird!
-  * You can customize the server to make your nickname in-game to be whatever you want!
+* Your PSN ID is not shown correctly in-game, it just says "BulletstormPlayer" instead (This doesn't break anything, it just looks weird)
 
 ## Currently untested:
 * Team Player trophy - the "Challenges" tracker in the Statistics uses data from Gamespy servers - so even if you meet the requirements and complete 200 of them, the trophy might not unlock :( There's no way to know until someone tries it.
