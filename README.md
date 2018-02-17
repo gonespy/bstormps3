@@ -74,10 +74,18 @@ Nope. As stated above, all you need to do is change your PS3 network settings to
 
 # Trophy Q&A
 ## Could this get your PSN account flagged on third party trophy tracking sites like truetrophies or psnprofiles?
-Probably, at least until those sites are aware of Gonespy and accept that using it does not fall within their definitions of "cheating". Anyone who unlocks "unobtainable" trophies via this method may have their account flagged on those sites. I plan on releasing a full step-by-step guide and taking photos/video to prove that it works so that hopefully these sites will not take action against your account if you choose to use Gonespy.
+Probably, at least until those sites are aware of Gonespy and accept that using it does not fall within their definitions of "cheating". Anyone who unlocks "unobtainable" trophies via this method may have their account flagged on those sites. I plan on releasing a video to prove that it works so that hopefully these sites will not take action against your account if you choose to use Gonespy.
 
 ## Is this cheating?
 No. You still have to put in the same amount of effort to get the trophies as before. There is nothing that the Gonespy server currently does or will ever be able to do that will fast-track or immediately unlock any trophies.
+
+## But it is cheating! You are using third party software to unlock unobtainable trophies!
+
+Why should these trophies be classed as forever unobtainable just because the developer/publisher/Gamespy decided to shut down the official servers? Why should gamers that own this game be blocked from content and trophies through no fault of their own? If there is an alternative way unlock the trophies that still involves meeting the same requirements and time/effort investment, then how is this cheating?
+
+If the game's developers knew of Gonespy and were ok with it - would it be "legit" then?
+
+If the gamespy.com domain expired and I bought it myself and set up a public Gonespy server there - removing the requirement to set your PS3's DNS server to your own one - would it be "legit" then?
 
 # Disclaimer
 You use Gonespy at your own risk. I cannot and will not be responsible for any hardware or software damage to a computer, PS3 console, networking equipment or other device, nor banning or limitations imposed on your PSN account, whilst using the Gonespy software.
