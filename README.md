@@ -56,9 +56,9 @@ Video proof of unlocking a trophy: https://www.youtube.com/watch?v=0S3hhf6QtNM
 # General Q&A
 
 ## Do you think it would be possible to fully restore Anarchy with all functionality by running the server in a public environment?
-I'm not sure if that would be a good idea. Gonespy is not secure, and the game sends some encrypted data from the PS network that might allow people to brute-force crack the cryto (Gamespy SDK is quite old and the crypto is weak by modern standards) and work out your PSN login password. 
+I'm not sure if that would be a good idea. Gonespy is not secure, and the game sends some encrypted data from the PSN that might allow people to brute-force crack the cryto (Gamespy SDK is quite old and the crypto is weak by modern standards). I'm not 100% sure what is in that data - probably your PSN handle at the very least. Probably not your password, credit card number, SSN :P
 
-(According to the SDK, Sony actually had to give Gamespy cipher files in order for the servers to decrypt the data mentioned above. Gonespy obviously does not have those ciphers, which, coincidentally, is why your PSN handle is not displayed in the main Anarchy screen)
+(According to the SDK, Sony had to give Gamespy cipher files in order for the servers to decrypt the data mentioned above. Gonespy obviously does not have those ciphers, which, coincidentally, is why your PSN handle is not displayed in the main Anarchy screen)
 
 Aside from the security risk above, I am no network programming expert - I doubt I would be able to restore all other functionality without help. I don't think the interest in this game is strong enough to warrant the effort.
 
