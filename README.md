@@ -16,6 +16,10 @@ As a bonus, it should be possible to have Gonespy unlock the exclusive Leash fro
 
 The server has no backend at the moment, meaning some features of the Anarchy game mode do not work as expected - leaderboards, game statistics, high scores etc. It simply implements the bare minimum in order for the client to not have any reason to think that any of the required Gamespy services are unavailable.
 
+Video proof of playing Anarchy: https://www.youtube.com/watch?v=SFGrvtr33kQ
+
+Video proof of unlocking a trophy: https://www.youtube.com/watch?v=0S3hhf6QtNM
+
 ## In order to use the server, you need:
 * [Java 8 or higher](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) installed on the PC that will be running Gonespy
 * a DNS server that can resolve the gamespy.com domain to your Gonespy server, while serving all other DNS requests as normal. I used [maradns with deadwood](http://maradns.samiam.org/) with the settings detailed [here](MARADNS_DEADWOOD.md). If you have a router or NAS with DNS functionality, you could use that instead
@@ -28,7 +32,7 @@ The server has no backend at the moment, meaning some features of the Anarchy ga
 * Download the latest Bulletstorm Gonespy release from [here](https://github.com/gonespy/bstormps3/raw/master/release/bstormps3-0.1.zip)
 * Extract the zip file to somewhere on your PC
 * Open a command prompt to the location you extracted to
-* run the command: ```java -jar bstormps3-01.jar```
+* run the command: ```java -jar bstormps3-0.1.jar```
 
 ## What works (tested & confirmed):
 * **Anarchy (private matches)**
