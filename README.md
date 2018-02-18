@@ -38,6 +38,7 @@ Video proof of unlocking a trophy: https://www.youtube.com/watch?v=0S3hhf6QtNM
 * **Anarchy (private matches)**
 * **Multiple PS3s running the game can connect to the same Gonespy server**
 * **Inviting other people to join your private matches**
+  * **You should not need to be connected to the same Gonespy server to send/accept invites - each person can run their own**
 * **XP/leveling**
 * **Earning trophies**
 * **DLC maps**
