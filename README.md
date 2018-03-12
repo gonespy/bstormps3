@@ -77,7 +77,7 @@ Nope. As stated above, all you need to do is change your PS3 network settings to
 
 # Trophy Q&A
 ## Could this get your PSN account flagged on third party trophy tracking sites like truetrophies or psnprofiles?
-Probably, at least until those sites are aware of Gonespy and accept that using it does not fall within their definitions of "cheating". Anyone who unlocks "unobtainable" trophies via this method may have their account flagged on those sites. I plan on releasing a video to prove that it works so that hopefully these sites will not take action against your account if you choose to use Gonespy.
+Probably, at least until those sites are aware of Gonespy and accept that using it does not fall within their definitions of "cheating". Anyone who unlocks "unobtainable" trophies via this method may have their account flagged on those sites. The Overview section above contains video links to prove that it works so that hopefully these sites will not take action against your account if you choose to use Gonespy.
 
 ## Is this cheating?
 No. You still have to put in the same amount of effort to get the trophies as before. There is nothing that the Gonespy server currently does or will ever be able to do that will fast-track or immediately unlock any trophies.
