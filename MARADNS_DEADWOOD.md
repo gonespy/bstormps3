@@ -82,13 +82,13 @@ Leave this command window open - closing it (or pressing Ctrl-C) will stop marad
 
 ### Starting/stopping deadwood
 
-To start deadwood, open a command prompt in the Deadwood-3-2-11-win32 folder and type:
+To start deadwood, open an administrator command prompt in the Deadwood-3-2-11-win32 folder and type:
 
 ```
 .\install.bat
 ```
 
-This will start deadwood as a Windows service in the background. You can close this command prompt if you want. When you want to stop deadwood, open a command prompt in the Deadwood-3-2-11-win32 folder and type:
+This will start deadwood as a Windows service in the background. You can close this command prompt if you want. When you want to stop deadwood, open an administrator command prompt in the Deadwood-3-2-11-win32 folder and type:
 
 ```
 .\uninstall.bat
