@@ -74,10 +74,10 @@ cd maradns-2-0.15-win32
 To start maradns, open a command prompt in the maradns folder and type:
 
 ```
-.\run_maradns.bat
+.\maradns.exe -f mararc
 ```
 
-the command window should close and a new one should open with a bunch of output. Leave this command window open - closing it will stop maradns.
+Leave this command window open - closing it will stop maradns.
 
 ### Starting/stopping deadwood
 
