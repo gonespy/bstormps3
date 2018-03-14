@@ -78,7 +78,7 @@ To start maradns, open a command prompt in the maradns folder and type the follo
 .\maradns.exe -f mararc
 ```
 
-Leave this command window open - closing it will stop maradns.
+Leave this command window open - closing it (or pressing Ctrl-C) will stop maradns.
 
 ### Starting/stopping deadwood
 
