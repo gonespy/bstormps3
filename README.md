@@ -26,12 +26,12 @@ Video proof of unlocking a trophy: https://www.youtube.com/watch?v=0S3hhf6QtNM
 * to let Gonespy and the DNS server through any relevant firewalls. If running DNS & Gonespy on the same Windows PC, you will need to let them through Windows Firewall if it is enabled. The ports Gonespy uses are:
   * TCP: 80, 443, 29900, 29901
   * UDP: 27900
-* to change your PS3 network settings to use your DNS server
+* to change your PS3 network settings to use your DNS server - see the guide [here](MARADNS_DEADWOOD.md#change-your-ps3s-network-settings)
 
 ## Usage instructions
 * Download the latest Bulletstorm Gonespy release from [here](https://github.com/gonespy/bstormps3/raw/master/release/bstormps3-0.1.zip)
 * Extract the zip file to somewhere on your PC
-* Open a [command prompt](https://github.com/gonespy/bstormps3/blob/master/MARADNS_DEADWOOD.md#user-content-quick-command-prompt-tutorial) to the location you extracted to
+* Open a [command prompt](MARADNS_DEADWOOD.md#user-content-quick-command-prompt-tutorial) to the location you extracted to
 * run the command: ```java -jar bstormps3-0.1.jar```
 
 Gonespy will remain running until you close the command prompt (or press Ctrl-C in the command prompt to stop it)
