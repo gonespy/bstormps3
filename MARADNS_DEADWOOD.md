@@ -24,7 +24,7 @@ timestamp_type = 2
 random_seed_file = "secret.txt"
 
 csv2 = {}
-csv2["gamespy.com."] = "dns.gamespy.com"
+csv2["gamespy.com."] = "gamespydns.txt"
 ```
 
 Create a text file named "gamespydns.txt" in the same folder as the "marac" file, and put in the following (remember to change the IP address 192.168.2.37 to that of your PC):
