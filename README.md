@@ -68,6 +68,8 @@ I advise running your own Gonespy server within your own network.
 
 Not intentionally. Gonespy contains dumb implementations of the specific Gamespy services required for Bulletstorm's Anarchy mode to work in private matches. The services themselves are not Bulletstorm-specific. You could try it with other games and see what happens! Any game that requires matchmaking will definitely not work. Games with private game modes that let you invite friends might work.
 
+See [here](http://aluigi.altervista.org/papers/gslist.cfg) for a list of games that use Gamespy.
+
 ## Would it be possible to resurrect the online multiplayer for other games that used Gamespy?
 Yes. Others have made replacement servers for many PC games over the years (C&C Red Alert 3, Battlefield 2, Battlefield 2142...). Some work similar to this project. Some require modifications to the game client as well - and some of _those_ were shut down because the publisher issued DMCA takedown notices due to the authors modifying the game code.
 
