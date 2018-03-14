@@ -66,9 +66,9 @@ I advise running your own Gonespy server within your own network.
 
 ## Does Gonespy support any games other than Bulletstorm?
 
-Not intentionally. Gonespy contains dumb implementations of the specific Gamespy services required for Bulletstorm's Anarchy mode to work in private matches. The services themselves are not Bulletstorm-specific. You could try it with other PS3 games and see what happens! Any game that requires matchmaking will definitely not work. Games with private game modes that let you invite friends might work.
+Not intentionally. Gonespy contains dumb implementations of the specific Gamespy services required for Bulletstorm's Anarchy mode to work in private matches. The services themselves are not Bulletstorm-specific. You could try it with other PS3/Vita games and see what happens! Any game that requires matchmaking will definitely not work. Games with private game modes that let you invite friends might work.
 
-Gonespy is PSN-specific so it will probably only work for PS3/Vita games, not for PC/Xbox/Wii/DS etc.
+Gonespy is PSN-specific so it will probably only work for PS3/Vita games, and not for PC/Xbox/Wii/DS etc. games.
 
 See [here](http://aluigi.altervista.org/papers/gslist.cfg) for a list of games that use Gamespy.
 
