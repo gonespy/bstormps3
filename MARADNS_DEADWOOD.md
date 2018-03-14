@@ -71,9 +71,10 @@ cd maradns-2-0.15-win32
 
 ### Starting/stopping maradns
 
-To start maradns, open a command prompt in the maradns folder and type:
+To start maradns, open a command prompt in the maradns folder and type the following:
 
 ```
+.\mkSecretTxt.exe
 .\maradns.exe -f mararc
 ```
 
