@@ -55,6 +55,14 @@ Gonespy will remain running until you close the command prompt (or press Ctrl-C 
 ## Currently untested:
 * Team Player trophy - the "Challenges" tracker in the Statistics uses data from Gamespy servers - so even if you meet the requirements and complete 200 of them, the trophy might not unlock :( There's no way to know until someone tries it.
 
+# Troubleshooting Q&A
+
+## When running Gonespy I get errors saying "Address already in use" or similar
+
+The ports needed by Gonespy are probably in use by another program (or maybe you tried to run Gonespy twice?)
+
+Also note Windows itself will use ports 80 & 443 if IIS features are enabled. To disable these features, go to Programs and Features. Click on Turn Windows features on or off. Uncheck Internet Information Services and also Internet Information Services Hostable Web Core if it is checked. Click OK to remove those applications.
+
 # General Q&A
 
 ## Do you think it would be possible to fully restore Anarchy with all functionality by running the server in a public environment?
