@@ -82,6 +82,10 @@ Gonespy is PSN-specific so it will probably only work for PS3/Vita games, and no
 
 See [here](http://aluigi.altervista.org/papers/gslist.cfg) for a list of games that use Gamespy.
 
+The following games have been reported by users as working to some degree:
+
+* 50 Cent: Blood on the Sand
+
 ## Would it be possible to resurrect the online multiplayer for other games that used Gamespy?
 Yes. Others have made replacement servers for many PC games over the years (C&C Red Alert 3, Battlefield 2, Battlefield 2142...). Some work similar to this project. Some require modifications to the game client as well - and some of _those_ were shut down because the publisher issued DMCA takedown notices due to the authors modifying the game code.
 
