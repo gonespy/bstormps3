@@ -23,9 +23,13 @@ Video proof of unlocking a trophy: https://www.youtube.com/watch?v=0S3hhf6QtNM
 ## In order to use the server, you need:
 * [Java 8 or higher](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) installed on the PC that will be running Gonespy
 * a DNS server that can resolve the gamespy.com domain to your Gonespy server, while serving all other DNS requests as normal. You can use [maradns with deadwood](http://maradns.samiam.org/) - see the guide [here](MARADNS_DEADWOOD.md). If you have a router or NAS with DNS functionality, you could use that instead.
-* to let Gonespy and the DNS server through any relevant firewalls. If running DNS & Gonespy on the same Windows PC, you will need to let them through Windows Firewall if it is enabled. The ports Gonespy uses are:
-  * TCP: 80, 443, 29900, 29901
-  * UDP: 27900
+* to let incoming traffic for Gonespy and the DNS server through any relevant firewalls. If running DNS & Gonespy on the same Windows PC, you will need to allow incoming traffic through Windows Firewall for the following ports (see [here](http://www.tomshardware.com/faq/id-3114787/open-firewall-ports-windows.html) for instructions):
+  * Gonespy:
+    * TCP: 80, 443, 29900, 29901
+    * UDP: 27900
+  * DNS:
+    * TCP: 53
+    * UDP: 53
 * to change your PS3 network settings to use your DNS server - see the guide [here](MARADNS_DEADWOOD.md#change-your-ps3s-network-settings)
 
 ## Usage instructions
