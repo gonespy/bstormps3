@@ -27,7 +27,7 @@ csv2 = {}
 csv2["gamespy.com."] = "gamespydns.txt"
 ```
 
-Create a text file named "gamespydns.txt" in the same folder as the "marac" file, and put in the following (remember to change the IP address 192.168.2.37 to that of your PC):
+Create a text file named "gamespydns.txt" in the same folder as the "marac" file, and copy-paste the following (copy-paste rather than type so that you get the right formatting, and remember to change the IP address 192.168.2.37 to that of your PC):
 
 ```
 *.gamespy.com.  A		192.168.2.37 ~
