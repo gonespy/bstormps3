@@ -108,7 +108,7 @@ Probably, at least until those sites are aware of Gonespy and accept that using 
 
 ### Site-specific stances
 
-* **psnprofiles.com** - The site owner has publically stated he is ok with using Gonespy *as long as it cannot shortcut/autopop trophies*
+* **psnprofiles.com** - The site owner has publically stated he is ok with using Gonespy *as long as it cannot shortcut/autopop trophies* - [proof](https://forum.psnprofiles.com/topic/58898-earning-trophies-on-3rd-party-independently-revived-psn-game-servers/?page=8#comment-1533517)
 * **psntrophyleaders.com** - The founder and a mod from psntrophyleaders.com have stated they do not consider using Gonespy to unlock Bulletstorm trophies cheating
 * **truetrophies.com** - The site owner has stated via PMs with a mod that he is ok with using Gonespy *as long as it cannot shortcut/autopop trophies*
 
