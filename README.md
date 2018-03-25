@@ -46,7 +46,7 @@ Gonespy will remain running until you close the command prompt (or press Ctrl-C 
 * **Inviting other people to join your private matches**
   * **You should not need to be connected to the same Gonespy server to send/accept invites - each person can run their own**
 * **XP/leveling**
-* **ALL Anarchy mode trophies (including Team Player - [proof](proof/bulletstorm_teamplayer.jpg)**
+* **ALL Anarchy mode trophies (including Team Player - [proof](proof/bulletstorm_teamplayer.jpg))**
 * **DLC maps**
 
 ## What doesn't work:
