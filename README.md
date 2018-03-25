@@ -46,7 +46,7 @@ Gonespy will remain running until you close the command prompt (or press Ctrl-C 
 * **Inviting other people to join your private matches**
   * **You should not need to be connected to the same Gonespy server to send/accept invites - each person can run their own**
 * **XP/leveling**
-* **Earning trophies**
+* **ALL Anarchy mode trophies (including Team Player - confirmed that the Team Challenge counter is not based on the leaderboards**
 * **DLC maps**
 
 ## What doesn't work:
@@ -55,9 +55,6 @@ Gonespy will remain running until you close the command prompt (or press Ctrl-C 
 * Statistics (some are tracked in the game, others were tracked by Gamespy so they don't show)
 * Offline Anarchy (connected to internet, but disconnected from PSN) - this didn't work before, but it was worth a shot!
 * Your PSN ID is not shown correctly in-game, it just says "BulletstormPlayer" instead (This doesn't break anything, it just looks weird)
-
-## Currently untested:
-* Team Player trophy - the "Challenges" tracker in the Statistics uses data from Gamespy servers - so even if you meet the requirements and complete 200 of them, the trophy might not unlock :( There's no way to know until someone tries it.
 
 # Troubleshooting Q&A
 
