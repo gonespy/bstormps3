@@ -33,7 +33,7 @@ Video proof of unlocking a trophy: https://www.youtube.com/watch?v=0S3hhf6QtNM
 * to change your PS3 network settings to use your DNS server - see the guide [here](MARADNS_DEADWOOD.md#change-your-ps3s-network-settings)
 
 ## Usage instructions
-* Download the latest Bulletstorm Gonespy release from [here](https://github.com/gonespy/bstormps3/raw/master/release/bstormps3-0.1.zip)
+* Download the latest Bulletstorm Gonespy release from [here](release/bstormps3-0.1.zip)
 * Extract the zip file to somewhere on your PC
 * Open a [command prompt](MARADNS_DEADWOOD.md#user-content-quick-command-prompt-tutorial) to the location you extracted to
 * run the command: ```java -jar bstormps3-0.1.jar```
@@ -46,7 +46,7 @@ Gonespy will remain running until you close the command prompt (or press Ctrl-C 
 * **Inviting other people to join your private matches**
   * **You should not need to be connected to the same Gonespy server to send/accept invites - each person can run their own**
 * **XP/leveling**
-* **ALL Anarchy mode trophies (including Team Player - confirmed that the Team Challenge counter is not based on the leaderboards**
+* **ALL Anarchy mode trophies (including Team Player - [proof](proof/bulletstorm_teamplayer.jpg)**
 * **DLC maps**
 
 ## What doesn't work:
