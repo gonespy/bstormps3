@@ -12,11 +12,11 @@ deadwood is required to forward all other DNS requests from your PS3 to Google's
 
 ## Download & configuration
 
-Download maradns-2-0-15-win32.zip from [here](http://maradns.samiam.org/download.html)
+Download `maradns-2-0-15-win32.zip` from [here](http://maradns.samiam.org/download.html)
 
 Extract the zip file somewhere on your computer.
 
-Edit the "mararc" file in the maradns directory and use these settings:
+Edit the `mararc` file in the maradns folder and use these settings:
 
 ```
 ipv4_bind_addresses = "127.0.0.1"
@@ -27,14 +27,14 @@ csv2 = {}
 csv2["gamespy.com."] = "gamespydns.txt"
 ```
 
-Create a text file named "gamespydns.txt" in the same folder as the "marac" file, and copy-paste the following (copy-paste rather than type so that you get the right formatting, and remember to change the IP address 192.168.2.37 to that of your PC):
+Create a text file named `gamespydns.txt` in the same folder as the `marac` file, and copy-paste the following (copy-paste rather than type so that you get the right formatting, and remember to change the IP address `192.168.2.37` to that of your PC):
 
 ```
 *.gamespy.com.  A		192.168.2.37 ~
 *.gamespy.net.  A		192.168.2.37 ~
 ```
 
-In the Deadwood-3-2-11-win32 folder, open the dwood3rc.txt text file and replace its contents with the following (remember to change the IP address 192.168.2.37 to that of your PC):
+In the `Deadwood-3-2-11-win32` folder, open the `dwood3rc.txt` text file and replace its contents with the following (remember to change the IP address `192.168.2.37` to that of your PC):
 
 ```
 upstream_servers = {}
@@ -62,7 +62,7 @@ filter_rfc1918 = 0
 
 ### Quick Command Prompt tutorial
 
-If you are not familar with opening a command prompt in Windows 10, you can do this by clicking on the Windows logo (Start menu) in the bottom-left corner of your screen, typing "cmd", then right-clicking on "Command Prompt" that appears and selecting "Run as administrator" (administrator mode is required for starting/stopping deadwood). Then change directory to where you extracted the maradns zip file to. For example, if you extracted the zip file to D:\maradns-2-0-15-win32 then you would type:
+If you are not familar with opening a command prompt in Windows 10, you can do this by clicking on the Windows logo (Start menu) in the bottom-left corner of your screen, typing "cmd", then right-clicking on "Command Prompt" that appears and selecting "Run as administrator" (administrator mode is required for starting/stopping deadwood). Then change directory to where you extracted the maradns zip file to. For example, if you extracted the zip file to `D:\maradns-2-0-15-win32` then you would type:
 
 ```
 cd d:
