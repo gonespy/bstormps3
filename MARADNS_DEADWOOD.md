@@ -104,3 +104,11 @@ Proxy Server: select Do Not Use.
 UPnP: select Enable.
 
 Finally, press the O button to save the settings.
+
+### Troubleshooting
+
+**Q: After changing my PS3 DNS settings, I get an error: "An error occurred during communication with the server. This is a DNS error. (80710102)"**
+
+* Does the output in your command prompt windows for maradns & deadwood look the same as in the guide? Are there any errors? If so, try following the guide again.
+* Did you open the required ports in Windows Firewall (or whatever other firewall security software you are running)?
+* Are the first three numbers of your PC & PS3's IP address the same? (eg. 192.168.1) If they are not, then you may have an unusual network setup that requires further changes...
