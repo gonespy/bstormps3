@@ -38,6 +38,10 @@ Video proof of unlocking a trophy: https://www.youtube.com/watch?v=0S3hhf6QtNM
 * Open a [command prompt](MARADNS_DEADWOOD.md#user-content-quick-command-prompt-tutorial) to the location you extracted to
 * run the command: ```java -jar bstormps3-0.1.jar```
 
+The command prompt should look like this if Gonespy is running correctly:
+
+![Gonespy command prompt](guide/gonespy.png)
+
 Gonespy will remain running until you close the command prompt (or press Ctrl-C in the command prompt to stop it)
 
 ## What works (tested & confirmed):

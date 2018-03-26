@@ -78,7 +78,11 @@ To start maradns, open a command prompt in the maradns folder and type the follo
 .\maradns.exe -f mararc
 ```
 
-Leave this command window open - closing it (or pressing Ctrl-C) will stop maradns.
+The command prompt should look like this if maradns is running correctly:
+
+![maradns command prompt](guide/maradns.png)
+
+Leave this command prompt open - closing it (or pressing Ctrl-C) will stop maradns.
 
 ### Starting/stopping deadwood
 
@@ -88,7 +92,13 @@ To start deadwood, open an administrator command prompt in the Deadwood-3-2-11-w
 .\install.bat
 ```
 
-This will start deadwood as a Windows service in the background. You can close this command prompt if you want. When you want to stop deadwood, open an administrator command prompt in the Deadwood-3-2-11-win32 folder and type:
+This will start deadwood as a Windows service in the background.
+
+The command prompt should look like this if deadwood is running correctly:
+
+![deadwood command prompt](guide/deadwood.png)
+
+You can close this command prompt if you want. When you want to stop deadwood, open an administrator command prompt in the Deadwood-3-2-11-win32 folder and type:
 
 ```
 .\uninstall.bat
