@@ -86,7 +86,7 @@ Leave this command prompt open - closing it (or pressing Ctrl-C) will stop marad
 
 ### Starting/stopping deadwood
 
-To start deadwood, open an administrator command prompt in the Deadwood-3-2-11-win32 folder and type:
+To start deadwood, open an **administrator** command prompt in the Deadwood-3-2-11-win32 folder and type:
 
 ```
 .\install.bat
