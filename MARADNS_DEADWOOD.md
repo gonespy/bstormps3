@@ -16,47 +16,9 @@ Download `maradns-2-0-15-win32.zip` from [here](http://maradns.samiam.org/downlo
 
 Extract the zip file somewhere on your computer.
 
-Edit the `mararc` file in the maradns folder and use these settings:
+Download the files [`mararc.txt`](https://raw.githubusercontent.com/gonespy/bstormps3/master/guide/mararc.txt) and [`gamespydns.txt`](https://raw.githubusercontent.com/gonespy/bstormps3/master/guide/gamespydns.txt) to your `maradns-2-0-15-win32` folder. Open them up and change the IP address `192.168.2.37` to that of your PC.
 
-```
-ipv4_bind_addresses = "127.0.0.1"
-timestamp_type = 2
-random_seed_file = "secret.txt"
-
-csv2 = {}
-csv2["gamespy.com."] = "gamespydns.txt"
-```
-
-Create a text file named `gamespydns.txt` in the same folder as the `marac` file, and copy-paste the following (copy-paste rather than type so that you get the right formatting, and remember to change the IP address `192.168.2.37` to that of your PC):
-
-```
-*.gamespy.com.  A		192.168.2.37 ~
-*.gamespy.net.  A		192.168.2.37 ~
-```
-
-In the `Deadwood-3-2-11-win32` folder, open the `dwood3rc.txt` text file and replace its contents with the following (remember to change the IP address `192.168.2.37` to that of your PC):
-
-```
-upstream_servers = {}
-upstream_servers["."]="8.8.8.8, 8.8.4.4" # Servers we connect to
-
-bind_address = "192.168.2.37"
-recursive_acl = "192.168.2.37/24"
-root_servers = {}
-root_servers["gamespy.com."] = "127.0.0.1"
-
-# The file containing a hard-to-guess secret
-random_seed_file = "secret.txt" 
-
-# This is the file Deadwood uses to read the cache to and from disk
-cache_file = "dw_cache_bin"
-
-# By default, for security reasons, Deadwood does not allow IPs in the
-# 192.168.x.x, 172.[16-31].x.x, 10.x.x.x, 127.x.x.x, 169.254.x.x,
-# 224.x.x.x, or 0.0.x.x range.  If using Deadwood to resolve names
-# on an internal network, uncomment the following line:
-filter_rfc1918 = 0
-```
+Open the `Deadwood-3-2-11-win32` folder and download the file [`dwood3rc.txt`](https://raw.githubusercontent.com/gonespy/bstormps3/master/guide/dwood3rc.txt) there (replacing the existing one), open it, and replace the IP address `192.168.2.37` with that of your PC
 
 ## Running maradns/deadwood
 
@@ -75,7 +37,7 @@ To start maradns, open a command prompt in the maradns folder and type the follo
 
 ```
 .\mkSecretTxt.exe
-.\maradns.exe -f mararc
+.\maradns.exe -f mararc.txt
 ```
 
 The command prompt should look like this if maradns is running correctly:
