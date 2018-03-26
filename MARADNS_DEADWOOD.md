@@ -6,7 +6,7 @@ The following instructions assume the following:
 * your PS3 is on the same network as your PC
 * **your PC's LAN IP address is 192.168.2.37 - replace this IP in all of these instructions with your PC's LAN IP address if it differs.** I recommended using a static IP address for your PC so it doesn't change every time you turn your computer on.
 
-maradns is required to make your PS3 think that Gonespy is Gamespy by forwarding all DNS requests for gamespy.com and gamespy.net to Gonespy.
+maradns is required to make your PS3 think that Gonespy is Gamespy by forwarding all DNS requests for `gamespy.com` and `gamespy.net` to Gonespy.
 
 deadwood is required to forward all other DNS requests from your PS3 to Google's DNS servers so that all other online functionality of your PS3 works correctly.
 
