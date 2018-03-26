@@ -24,7 +24,7 @@ Open the `Deadwood-3-2-11-win32` folder and download the file [`dwood3rc.txt`](h
 
 ### Quick Command Prompt tutorial
 
-If you are not familar with opening a command prompt in Windows 10, you can do this by clicking on the Windows logo (Start menu) in the bottom-left corner of your screen, typing "cmd", then right-clicking on "Command Prompt" that appears and selecting "Run as administrator" (administrator mode is required for starting/stopping deadwood). Then change directory to where you extracted the maradns zip file to. For example, if you extracted the zip file to `D:\maradns-2-0-15-win32` then you would type:
+If you are not familar with opening a command prompt in Windows 10, you can do this by clicking on the Windows logo (Start menu) in the bottom-left corner of your screen, typing "cmd", then right-clicking on "Command Prompt" that appears and selecting "Run as administrator" (**administrator mode is required for starting/stopping deadwood**). Then change directory to where you extracted the maradns zip file to. For example, if you extracted the zip file to `D:\maradns-2-0-15-win32` then you would type:
 
 ```
 cd d:
@@ -119,4 +119,4 @@ Make sure you have downloaded `gamespydns.txt` to your maradns folder as instruc
 
 **Q: After running the deadwood command in the command prompt, I see an error: `Problem creating service`**
 
-Make sure you are running the deadwood command in an administrator command prompt - see the [Quick Command Prompt tutorial](#quick-command-prompt-tutorial)
+Make sure you are running the deadwood command in an **administrator** command prompt, not a regular command prompt - see the [Quick Command Prompt tutorial](#quick-command-prompt-tutorial)
