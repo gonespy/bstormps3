@@ -103,6 +103,10 @@ Unlikely. The Gamespy servers do not communicate directly with the PSN in any wa
 ## Do you have to mod your PS3 to use Gonespy?
 Nope. As stated above, all you need to do is change your PS3 network settings to use a custom DNS server to trick the game into thinking that Gonespy is the real deal!
 
+## Does Gonespy work on operating systems other than Windows?
+
+While untested and no guide exists for any operating system other than Windows 7 or later, it should. As long as you can install Java 8 on it and run your own DNS server, it should be possible.
+
 # Trophy Q&A
 ## Could this get your PSN account flagged on third party trophy tracking sites and leaderboards?
 Probably, at least until those sites are aware of Gonespy and accept that using it does not fall within their definitions of "cheating". Anyone who unlocks "unobtainable" trophies via this method may have their account flagged on those sites. The Overview section above contains video links to prove that it works so that hopefully these sites will not take action against your account if you choose to use Gonespy.
