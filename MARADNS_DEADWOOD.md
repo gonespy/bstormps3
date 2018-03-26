@@ -115,4 +115,4 @@ Finally, press the O button to save the settings.
 
 **Q: After running the maradns command in the command prompt, I see an error: `Error running stat() on gamespydns.txt / Error opening gamespydns.txt`**
 
-Make sure you have downloaded gamespydns.txt to your maradns folder as instructed in the guide above.
+Make sure you have downloaded `gamespydns.txt` to your maradns folder as instructed in the guide above.
