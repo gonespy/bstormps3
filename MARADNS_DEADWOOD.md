@@ -111,6 +111,7 @@ Finally, press the O button to save the settings.
 
 * Does the output in your command prompt windows for maradns & deadwood look the same as in the guide? Are there any errors? If so, try following the guide again.
 * Did you open the required ports in Windows Firewall (or whatever other firewall security software you are running)?
+* Try setting your mobile phone or other device to use your PC's IP address as its primary DNS and see if that works. If it does, then there is an issue with the network settings on your PS3. If it does not, then there is an issue with maradns/deadwood.
 * Are the first three numbers of your PC & PS3's IP address the same? (eg. 192.168.1) If they are not, then you probably have a complex network setup in your home and this guide will not work for you.
 
 **Q: After running the maradns command in the command prompt, I see an error: `Error running stat() on gamespydns.txt / Error opening gamespydns.txt`**
