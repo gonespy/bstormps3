@@ -48,7 +48,7 @@ Leave this command prompt open - closing it (or pressing Ctrl-C) will stop marad
 
 ### Starting/stopping deadwood
 
-To start deadwood, open an **administrator** command prompt in the Deadwood-3-2-11-win32 folder and type:
+To start deadwood, open an **administrator** command prompt in the `Deadwood-3-2-11-win32` folder and type:
 
 ```
 .\install.bat
@@ -62,7 +62,7 @@ The command prompt should look like this if deadwood is running correctly:
 
 Note that deadwood does not log all its errors to the command prompt, so if you are having issues with it, check the file `dwlog.txt` for any errors.
 
-You can close this command prompt if you want. When you want to stop deadwood, open an administrator command prompt in the Deadwood-3-2-11-win32 folder and type:
+You can close this command prompt if you want. When you want to stop deadwood, open an administrator command prompt in the `Deadwood-3-2-11-win32` folder and type:
 
 ```
 .\uninstall.bat
