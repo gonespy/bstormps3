@@ -66,6 +66,8 @@ Gonespy will remain running until you close the command prompt (or press Ctrl-C 
 
 The ports needed by Gonespy are probably in use by another program (or maybe you tried to run Gonespy twice?)
 
+Skype uses port 80 so try completely shutting that program down if it is running.
+
 Also note Windows itself will use ports 80 & 443 if IIS features are enabled. To disable these features, go to Programs and Features. Click on Turn Windows features on or off. Uncheck Internet Information Services and also Internet Information Services Hostable Web Core if it is checked. Click OK to remove those applications.
 
 # General Q&A
