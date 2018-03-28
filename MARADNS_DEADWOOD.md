@@ -60,6 +60,8 @@ The command prompt should look like this if deadwood is running correctly:
 
 ![deadwood command prompt](guide/deadwood.png)
 
+Note that deadwood does not log all its errors to the command prompt, so if you are having issues with it, check the file `dwlog.txt` for any errors.
+
 You can close this command prompt if you want. When you want to stop deadwood, open an administrator command prompt in the Deadwood-3-2-11-win32 folder and type:
 
 ```
@@ -122,8 +124,8 @@ Make sure you have downloaded `gamespydns.txt` to your maradns folder as instruc
 
 Make sure you are running the deadwood command in an **administrator** command prompt, not a regular command prompt - see the [Quick Command Prompt tutorial](#quick-command-prompt-tutorial)
 
-**Q: After running the maradns or deadwood command in the command prompt, I see an error: `Unable to get 128 bits of entropy; file secret.txt must be at least 16 bytes (128 bits) long`**
+**Q: After running the deadwood command in the command prompt, I see this error in `dwlog.txt`: `Unable to get 128 bits of entropy; file secret.txt must be at least 16 bytes (128 bits) long`**
 
-Try deleting the `secret.txt` file from both folders and try again. If that doesn't work, try opening `secret.txt` and replace its content with:
+Try deleting the `secret.txt` file from the deadwood folder and try again. If that doesn't work, try opening `secret.txt` and replace its content with:
 
 ```4íñ=fñŒ`Ãàùql¯+×‘ Ï"¹3šoÀ^V–º¡F ×Æ’$ñ\–áÀCN_8~°vhãÏèžÇˆEs+```
