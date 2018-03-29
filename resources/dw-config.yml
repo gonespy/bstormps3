@@ -18,7 +18,7 @@ server:
 
 swagger:
   resourcePackage: com.gonespy.bstormps3.service.debug.resources
-  contextRoot: "/gonespy"
+  contextRoot: "/"
   schemes:
     - https
     - http
