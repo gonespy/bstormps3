@@ -1,0 +1,20 @@
+server:
+  applicationConnectors:
+    - type: http
+      port: 80
+  adminConnectors:
+    - type: http
+      port: 8082
+
+swagger:
+  resourcePackage: com.gonespy.service.sake.resources
+  contextRoot: "/"
+  schemes:
+    - http
+
+logging:
+  level: INFO
+  appenders:
+    - type: console  
+      
+    
