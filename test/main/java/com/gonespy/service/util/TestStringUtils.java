@@ -11,6 +11,9 @@ import static com.google.common.truth.Truth.assertThat;
 
 public class TestStringUtils {
 
+    // GOLDEN MD5 - this is what signature contains & what we need!
+    private static final String EA_EMU_MD5 = "6a9f632a5175f4c4aeaf4c6b7a3615ea";
+
     @Test
     public void testGsLoginProof() {
         String md5 = StringUtils.gsLoginProof("password","user","clientchallenge","serverchallenge");
@@ -26,7 +29,8 @@ public class TestStringUtils {
         fillServerData(certificateData);
 
         String md5 = StringUtils.hashCertificate(certificateData);
-        assertThat(md5).isEqualTo("6a9f632a5175f4c4aeaf4c6b7a3615ea"); // GOLDEN MD5 - this is what signature contains
+        assertThat(md5).isEqualTo("535350f3423eb1d125a54b39e7b3a57f"); // verified in C v2
+        assertThat(md5).isEqualTo(EA_EMU_MD5); // what we actually want
     }
 
     @Test
@@ -41,12 +45,14 @@ public class TestStringUtils {
         for(int i=0; i<=1000; i++) {
             for(int j=0; j<=1000; j++) {
                 for(int k=0; k<=10; k++) {
-                    certificateData.put("version", "" + k);
-                    certificateData.put("partnercode", "" + i);
-                    certificateData.put("namespaceid", "" + j);
-                    String md5 = StringUtils.hashCertificate(certificateData);
+                    //certificateData.put("version", "" + k);
+                    //certificateData.put("partnercode", "" + i);
+                    //certificateData.put("namespaceid", "" + j);
+                    certificateData.put("userid", "" + i);
+                    certificateData.put("profileid", "" + j);
+                    String md5 = StringUtils.hashCertificate(certificateData).toLowerCase();
                     //System.out.println(md5);
-                    if (md5.equals("6a9f632a5175f4c4aeaf4c6b7a3615ea")) {
+                    if (md5.equals(EA_EMU_MD5)) {
                         System.out.println("i=" + i + ",j=" + j);
                     }
                 }
@@ -81,7 +87,7 @@ public class TestStringUtils {
         fillServerData(certificateData);
 
         String md5 = StringUtils.hashCertificate(certificateData);
-        assertThat(md5).isEqualTo("c0ebc484d51e2797d23d6e737ce2cc04"); // verified in C... endian-ness?
+        assertThat(md5).isEqualTo("c0ebc484d51e2797d23d6e737ce2cc04"); // verified in C
     }
 
     private static void fillIntegers(Map<String, String> certificateData) {

@@ -79,7 +79,7 @@ public abstract class CertificateUtils {
         certificateData.put("serverdata", SERVER_DATA); // 256 chars = 128 bytes
 
         String md5 = StringUtils.hashCertificate(certificateData);
-        String signature = generateSignature(md5, certificateData);
+        String signature = generateSignature(md5);
         certificateData.put("signature", signature);
 
         return certificateData;
@@ -163,7 +163,7 @@ public abstract class CertificateUtils {
     // cert->mIsValid = wsLoginCertIsValid(cert);
 
 
-    private static String generateSignature(String md5, Map<String, String> certificateData) {
+    private static String generateSignature(String md5) {
 
         // raw length should be 128 bytes / 256 chars
         // Signature format:
@@ -193,7 +193,7 @@ public abstract class CertificateUtils {
         // TODO: should be encrypting with PRIVATE key - what is it?
         // client decrypts with public key WS_AUTHSERVICE_SIGNATURE_KEY / WS_AUTHSERVICE_SIGNATURE_EXP
         lint.gsLargeIntReverseBytes();
-        GsLargeInt encryptedLint = lint.encrypt(
+        GsLargeInt encryptedLint = GsLargeInt.encrypt(
                 lint,
                 GsLargeInt.gsLargeIntSetFromHexString(WS_AUTHSERVICE_SIGNATURE_PRIVATE_EXP),
                 GsLargeInt.gsLargeIntSetFromHexString(WS_AUTHSERVICE_SIGNATURE_KEY)

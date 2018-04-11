@@ -67,9 +67,7 @@ public class AvailabilityService implements Runnable {
         public void run() {
             try {
                 final byte[] buf = AVAILABLE_RESPONSE;
-                socket.send(
-                        new DatagramPacket(buf, buf.length, incomingPacket.getAddress(), incomingPacket.getPort())
-                );
+                socket.send(new DatagramPacket(buf, buf.length, incomingPacket.getAddress(), incomingPacket.getPort()));
                 LOG.info("Sent to " + incomingPacket.getSocketAddress().toString() + " - " + StringUtils.asciiToReadableHex(buf));
             } catch (IOException e) {
                 LOG.error("Failed to send packet to " + incomingPacket.getSocketAddress() + ": " + e.getMessage());

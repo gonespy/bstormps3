@@ -133,31 +133,19 @@ public class GsLargeInt {
     }
 
     // GsLargeInt.data in C can be passed to MD5 function as byte array parameter by casting a pointer
-    // in Java we need to convert each long (acting as an unsigned int) explictly to an array of 4 bytes
+    // in Java we need to convert each long (acting as an unsigned int) explictly to 4 bytes
     public byte[] dataAsByteArray() {
-        List<Byte> bytesList = new ArrayList<>();
-        byte[] bytes = new byte[Integer.BYTES];
-        for(int i=0; i<this.length; i++) {
-            long val = this.data[i];
-            bytes[3] = (byte) (val);
-            val >>>= 8;
-            bytes[2] = (byte) (val);
-            val >>>= 8;
-            bytes[1] = (byte) (val);
-            val >>>= 8;
-            bytes[0] = (byte) (val);
-            // add the least significant 4 bytes to the array (should be the same as unsigned int?)
-            bytesList.add(bytes[0]);
-            bytesList.add(bytes[1]);
-            bytesList.add(bytes[2]);
-            bytesList.add(bytes[3]);
+        byte[] bytes = new byte[this.length * Integer.BYTES];
+        for(int integerIndex = 0; integerIndex < this.length; integerIndex++) {
+            long byteVal = this.data[integerIndex];
+            for(int byteIndex = 0; byteIndex < Integer.BYTES; byteIndex++) {
+                if(byteIndex > 0) {
+                    byteVal >>>= 8;
+                }
+                bytes[Integer.BYTES * integerIndex + byteIndex] = (byte)byteVal;
+            }
         }
-        byte[] ret = new byte[bytesList.size()];
-        int i = 0;
-        for(Byte b : bytesList) {
-            ret[i++] = b;
-        }
-        return ret;
+        return bytes;
     }
 
     //gsi_bool gsLargeIntPowerMod(const gsLargeInt_t *b, const gsLargeInt_t *p, const gsLargeInt_t *m, gsLargeInt_t *dest)

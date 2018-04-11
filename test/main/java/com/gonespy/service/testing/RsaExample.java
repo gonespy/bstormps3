@@ -4,7 +4,6 @@ import org.apache.commons.codec.digest.DigestUtils;
 
 import javax.crypto.Cipher;
 import javax.xml.bind.DatatypeConverter;
-import java.io.InputStream;
 import java.security.*;
 
 import static java.nio.charset.StandardCharsets.UTF_8;
@@ -18,33 +17,12 @@ public class RsaExample {
         return pair;
     }
 
-    public static KeyPair getKeyPairFromKeyStore() throws Exception {
-        //Generated with:
-        //  keytool -genkeypair -alias mykey -storepass s3cr3t -keypass s3cr3t -keyalg RSA -keystore keystore.jks
-
-        InputStream ins = RsaExample.class.getResourceAsStream("/keystore.jks");
-
-        KeyStore keyStore = KeyStore.getInstance("JCEKS");
-        keyStore.load(ins, "s3cr3t".toCharArray());   //Keystore password
-        KeyStore.PasswordProtection keyPassword =       //Key password
-                new KeyStore.PasswordProtection("s3cr3t".toCharArray());
-
-        KeyStore.PrivateKeyEntry privateKeyEntry = (KeyStore.PrivateKeyEntry) keyStore.getEntry("mykey", keyPassword);
-
-        java.security.cert.Certificate cert = keyStore.getCertificate("mykey");
-        PublicKey publicKey = cert.getPublicKey();
-        PrivateKey privateKey = privateKeyEntry.getPrivateKey();
-
-        return new KeyPair(publicKey, privateKey);
-    }
-
     public static String encrypt(String plainText, PublicKey publicKey) throws Exception {
         Cipher encryptCipher = Cipher.getInstance("RSA");
         encryptCipher.init(Cipher.ENCRYPT_MODE, publicKey);
 
         byte[] cipherText = encryptCipher.doFinal(plainText.getBytes(UTF_8));
 
-        //return Base64.getEncoder().encodeToString(cipherText);
         return DatatypeConverter.printHexBinary(cipherText);
     }
 
@@ -65,7 +43,6 @@ public class RsaExample {
 
         byte[] signature = privateSignature.sign();
 
-        //return Base64.getEncoder().encodeToString(signature);
         return DatatypeConverter.printHexBinary(signature);
     }
 
@@ -74,7 +51,6 @@ public class RsaExample {
         publicSignature.initVerify(publicKey);
         publicSignature.update(plainText.getBytes(UTF_8));
 
-        //byte[] signatureBytes = Base64.getDecoder().decode(signature);
         byte[] signatureBytes = DatatypeConverter.parseHexBinary(signature);
 
         return publicSignature.verify(signatureBytes);
@@ -83,7 +59,6 @@ public class RsaExample {
     public static void main(String... argv) throws Exception {
         //First generate a public/private key pair
         KeyPair pair = generateKeyPair();
-        //KeyPair pair = getKeyPairFromKeyStore();
 
         //Our secret message
         String message = "the answer to life the universe and everything";
