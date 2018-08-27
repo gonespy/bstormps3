@@ -1,0 +1,28 @@
+server:
+  applicationConnectors:
+    - type: https
+      port: 443
+      keyStorePassword: password
+      keyStorePath: resources/myKeyStore.jks
+      validateCerts: false
+      validatePeers: false
+      supportedProtocols: [SSLv3,TLSv1.2]
+      excludedProtocols: []
+      supportedCipherSuites: [SSL_RSA_WITH_RC4_128_MD5]
+      excludedCipherSuites: []
+  adminConnectors:
+    - type: http
+      port: 8081
+
+swagger:
+  resourcePackage: com.gonespy.service.auth.resources
+  contextRoot: "/"
+  schemes:
+    - https
+
+logging:
+  level: INFO
+  appenders:
+    - type: console  
+      
+    

@@ -172,7 +172,7 @@
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>com.gonespy.bstormps3.service.RunAllServices</mainClass>
+                                    <mainClass>com.gonespy.service.RunAllServices</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
@@ -188,7 +188,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>com.gonespy.bstormps3.service.RunAllServices</mainClass>
+                            <mainClass>com.gonespy.service.RunAllServices</mainClass>
                             <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
                         </manifest>
                         <!--<manifestEntries>
