@@ -42,18 +42,22 @@ public class TestStringUtils {
         fillPeerKey(certificateData);
         fillServerData(certificateData);
 
-        for(int i=0; i<=1000; i++) {
-            for(int j=0; j<=1000; j++) {
-                for(int k=0; k<=10; k++) {
-                    //certificateData.put("version", "" + k);
-                    //certificateData.put("partnercode", "" + i);
-                    //certificateData.put("namespaceid", "" + j);
-                    certificateData.put("userid", "" + i);
-                    certificateData.put("profileid", "" + j);
-                    String md5 = StringUtils.hashCertificate(certificateData).toLowerCase();
-                    //System.out.println(md5);
-                    if (md5.equals(EA_EMU_MD5)) {
-                        System.out.println("i=" + i + ",j=" + j);
+        for(int partnerCode=0; partnerCode<=1; partnerCode++) {
+            for(int namespaceId=0; namespaceId<=1; namespaceId++) {
+                for(int version=0; version<=5; version++) {
+                    for(int userId=0; userId<=10000; userId++) {
+                        for (int profileId = 0; profileId <= 10000; profileId++) {
+                            certificateData.put("version", "" + version);
+                            certificateData.put("partnercode", "" + partnerCode);
+                            certificateData.put("namespaceid", "" + namespaceId);
+                            certificateData.put("userid", "" + userId);
+                            certificateData.put("profileid", "" + profileId);
+                            String md5 = StringUtils.hashCertificate(certificateData).toLowerCase();
+                            //System.out.println(md5);
+                            if (md5.equals(EA_EMU_MD5)) {
+                                System.out.println("partnerCode=" + partnerCode + ",namespaceId=" + namespaceId + ",version=" + version);
+                            }
+                        }
                     }
                 }
             }
