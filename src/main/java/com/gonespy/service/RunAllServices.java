@@ -6,8 +6,13 @@ import com.gonespy.service.gpcm.GPCMService;
 import com.gonespy.service.gpsp.GPSPService;
 import com.gonespy.service.sake.SakeService;
 import com.gonespy.service.stats.GStatsService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class RunAllServices {
+
+    private static final String DISPLAY_NAME = RunAllServices.class.getSimpleName();
+    private static final Logger LOG = LoggerFactory.getLogger(DISPLAY_NAME);
 
     public static void main(String[] args) {
 
@@ -34,7 +39,7 @@ public class RunAllServices {
         sakeServiceThread.start();
         DropwizardProbe.probeOnPort(80, true);
 
-        System.out.println("=== ALL SERVICES STARTED! ===");
+        LOG.info("=== ALL SERVICES STARTED! ===");
 
     }
 

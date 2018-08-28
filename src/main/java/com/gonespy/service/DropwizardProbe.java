@@ -1,5 +1,8 @@
 package com.gonespy.service;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import javax.net.ssl.*;
 import java.io.IOException;
 import java.net.HttpURLConnection;
@@ -9,6 +12,9 @@ import java.security.NoSuchAlgorithmException;
 import java.security.cert.X509Certificate;
 
 public abstract class DropwizardProbe {
+
+    private static final String DISPLAY_NAME = DropwizardProbe.class.getSimpleName();
+    private static final Logger LOG = LoggerFactory.getLogger(DISPLAY_NAME);
 
     static {
         disableSslVerification();
@@ -21,16 +27,20 @@ public abstract class DropwizardProbe {
             try {
                 URL url;
                 if(port == 443) {
-                    url = new URL("https://localhost/probe");
+                    url = new URL("https://127.0.0.1/probe");
                 } else {
-                    url = new URL("http://localhost/probe");
+                    url = new URL("http://127.0.0.1/probe");
                 }
                 HttpURLConnection con = (HttpURLConnection) url.openConnection();
+                con.setRequestProperty("User-Agent", "Gonespy Dropwizard Probe");
                 con.setRequestMethod("GET");
-                System.out.println("Port " + port + " is responding: " + con.getResponseCode());
+                LOG.info("Port " + port + " is responding: " + con.getResponseCode());
+                break;
+            } catch(SSLHandshakeException e) {
+                LOG.info("Port " + port + " is responding but with SSL error which is ok");
                 break;
             } catch (IOException io) {
-                System.out.println("Waiting for port " + port + " to accept connection");
+                LOG.info("Waiting for port " + port + " to accept connection");
                 try {
                     Thread.sleep(1000);
                 } catch(InterruptedException e) {}
