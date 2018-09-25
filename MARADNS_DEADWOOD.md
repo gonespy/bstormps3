@@ -12,7 +12,9 @@ deadwood is required to forward all other DNS requests from your PS3 to Google's
 
 ## Download & configuration
 
-Download `maradns-2-0-15-win32.zip` from [here](http://maradns.samiam.org/download.html)
+Download `maradns-2-0-15-win32.zip` from [here](https://maradns.samiam.org/download/2.0/2.0.15/maradns-2-0-15-win32.zip)
+
+(NOTE: You can find the latest version of maradns [here](https://maradns.samiam.org/download.html) but there are reports that the latest version (2.0.16) has security improvements that make it incompatible with this guide.)
 
 Extract the zip file somewhere on your computer.
 
