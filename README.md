@@ -138,8 +138,7 @@ To use a different key pair, you would have to hack the game code to use a diffe
 Using custom firmware is against Sony's TOS, and also not allowed on trophy leaderboard sites for unlocking unobtainable trophies, so this is not a good solution.
 
 Hacking the game code on PC to use a different public key is comparatively quite easy, so this method works well for PC games. 
-However, hacking the game code is currently deemed a DMCA violation in the United States - some projects have been shut down 
-because they have been threatened with legal action.
+However, hacking the game code is currently deemed a DMCA violation in the United States - some projects that have gone this route have shut down due to the thread of legal action.
 
 ## Can further work be done to get Unreal Engine games working with matchmaking etc?
 
