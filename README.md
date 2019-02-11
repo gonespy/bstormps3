@@ -125,6 +125,12 @@ This is why Gonespy works with games like Bulletstorm and Unreal Tournament III.
 The key pair is 1024 bit RSA which would take a very long time to brute force crack. You would need the computing resources of a
 first-world government to do it in a reasonable amount of time.
 
+## Could anyone know what the private key is?
+
+The private key would have been included in the GameSpy source code. Ex-GameSpy employees might know it. GameSpy was bought by IGN and then Glu Mobile, so it's also possible one or both of those companies still have knowledge of the private key.
+
+It would be great if Glu Mobile were kind enough to release the private key so anyone could emulate the GameSpy services, given it is extremely unlikely GameSpy will ever be revived. Even if it was, they would probably upgrade their key sizes to at least 2048 bit rather than continuing to use the same old 1024 bit key.
+
 ## Can't you just use a different key pair?
 
 To use a different key pair, you would have to hack the game code to use a different public key. To do this you would need custom firmware, and even then I'm not sure how easy this is.
