@@ -117,13 +117,23 @@ The game expects the server to respond with a similar certificate, with an addit
 The game attempts to decrypt the signature field with the matching public key (which is known). I don't know what the 
 private key is, so it is impossible to generate a signature field that the game expects.
 
-Games that use Unreal Engine seem to have a bug/feature where game doesn't really care if the certificate signature is wrong. 
+Games that use Unreal Engine seem to have a bug/feature where the game doesn't really care if the certificate signature is wrong. 
 This is why Gonespy works with games like Bulletstorm and Unreal Tournament III.
 
 ## Can't you just "crack" the private key?
 
-The key pair is 1024 bit RSA which would take a very long time to brute force crack. You would need the computing resources of a
-first-world government to do it in a reasonable amount of time.
+There are two well-known approaches to cracking RSA keys - brute force, and integer factorisation.
+
+### Brute force
+
+This is the "dumb" approach. The key pair is 1024 bit RSA which would take a very long time to brute force crack. You would need the computing resources of a
+first-world government(s) to do it in a reasonable amount of time, and even then it would take years. See [here](https://blog.codinghorror.com/brute-force-key-attacks-are-for-dummies/) if you want to know more.
+
+### Integer factorisation
+
+This seems to be the most popular approach academics use to crack RSA keys. There has been some activity in late 2019/eary 2020 cracking keys up to 829-bit using open source software [CADO-NFS](http://cado-nfs.gforge.inria.fr/) which is promising to see. This software is under active development, and getting more efficient in its approach. The software can be run in cloud computing environments allowing you to leverage the power of many PCs to contribute to the cracking of a key. Research teams typically use supercomputing resources like [Grid5000](https://www.grid5000.fr/) to accomplish this.
+
+If a research team is able to crack the [RSA challenge 1024-bit key](https://en.wikipedia.org/wiki/RSA_Factoring_Challenge) (which will probably happen in the next 10 years) that *might* mean the Gamespy key could feasibly be cracked also, but it would require a community effort with hundreds/thousands of people donating their computing resources (think [Folding@Home](https://en.wikipedia.org/wiki/Folding@home). However, it is a race against time - will the PS3 still be PSN-enabled by the time the key can be cracked?
 
 ## Could anyone know what the private key is?
 
