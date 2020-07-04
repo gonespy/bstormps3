@@ -32,8 +32,8 @@ public class AuthResource {
     // Request Types
     private static final String LOGIN_PS3_CERT_REQUEST = "LoginPs3Cert";
     private static final String LOGIN_PS3_CERT_REQUEST_WITH_GAMEID = "LoginPs3CertWithGameId";
-    private static final String LOGIN_PS3_REMOTE_AUTH_REQUEST = "LoginRemoteAuth";
-    private static final String LOGIN_PS3_REMOTE_AUTH_REQUEST_WITH_GAMEID = "LoginRemoteAuthWithGameId";
+    private static final String LOGIN_REMOTE_AUTH_REQUEST = "LoginRemoteAuth";
+    private static final String LOGIN_REMOTE_AUTH_REQUEST_WITH_GAMEID = "LoginRemoteAuthWithGameId";
 
     //Result types
     private static final String LOGIN_PS3_CERT_RESULT = "LoginPs3CertResult";
@@ -44,8 +44,8 @@ public class AuthResource {
     private static final Map<String, String> REQUEST_RESULT_MAP = ImmutableMap.of(
         LOGIN_PS3_CERT_REQUEST, LOGIN_PS3_CERT_RESULT,
         LOGIN_PS3_CERT_REQUEST_WITH_GAMEID, LOGIN_PS3_CERT_RESULT_WITH_GAMEID,
-        LOGIN_PS3_REMOTE_AUTH_REQUEST, LOGIN_REMOTE_AUTH_RESULT,
-        LOGIN_PS3_REMOTE_AUTH_REQUEST_WITH_GAMEID, LOGIN_REMOTE_AUTH_RESULT_WITH_GAMEID
+        LOGIN_REMOTE_AUTH_REQUEST, LOGIN_REMOTE_AUTH_RESULT,
+        LOGIN_REMOTE_AUTH_REQUEST_WITH_GAMEID, LOGIN_REMOTE_AUTH_RESULT_WITH_GAMEID
     );
 
     public AuthResource() {
@@ -78,8 +78,8 @@ public class AuthResource {
             case LOGIN_PS3_CERT_REQUEST_WITH_GAMEID:
                 response = loginPs3AuthResponse(requestType);
                 break;
-            case LOGIN_PS3_REMOTE_AUTH_REQUEST:
-            case LOGIN_PS3_REMOTE_AUTH_REQUEST_WITH_GAMEID:
+            case LOGIN_REMOTE_AUTH_REQUEST:
+            case LOGIN_REMOTE_AUTH_REQUEST_WITH_GAMEID:
                 response = loginRemoteAuthResponse(requestType, map);
         }
         return response;
