@@ -29,11 +29,15 @@ public class AuthResource {
 
     // Request Types
     private static final String LOGIN_PS3_CERT_REQUEST = "LoginPs3Cert";
+    private static final String LOGIN_PS3_CERT_REQUEST_WITH_GAMEID = "LoginPs3CertWithGameId";
     private static final String LOGIN_PS3_REMOTE_AUTH_REQUEST = "LoginRemoteAuth";
+    private static final String LOGIN_PS3_REMOTE_AUTH_REQUEST_WITH_GAMEID = "LoginRemoteAuthWithGameId";
 
     //Result types
     private static final String LOGIN_PS3_CERT_RESULT = "LoginPs3CertResult";
+    private static final String LOGIN_PS3_CERT_RESULT_WITH_GAMEID = "LoginPs3CertWithGameIdResult";
     private static final String LOGIN_REMOTE_AUTH_RESULT = "LoginRemoteAuthResult";
+    private static final String LOGIN_REMOTE_AUTH_RESULT_WITH_GAMEID = "LoginRemoteAuthWithGameIdResult";
 
     public AuthResource() {
 
@@ -62,9 +66,11 @@ public class AuthResource {
         Response response = null;
         switch(requestType) {
             case LOGIN_PS3_CERT_REQUEST:
+            case LOGIN_PS3_CERT_REQUEST_WITH_GAMEID:
                 response = loginPs3AuthResponse();
                 break;
             case LOGIN_PS3_REMOTE_AUTH_REQUEST:
+            case LOGIN_PS3_REMOTE_AUTH_REQUEST_WITH_GAMEID:
                 response = loginRemoteAuthResponse(map);
         }
         return response;
