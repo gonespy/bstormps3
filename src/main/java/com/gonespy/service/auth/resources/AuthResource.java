@@ -27,6 +27,11 @@ import static com.gonespy.service.shared.Constants.PEER_KEY_PRIVATE;
 public class AuthResource {
     private static final Logger LOG = LoggerFactory.getLogger(AuthResource.class);
 
+    // Request Types
+    private static final String LOGIN_PS3_CERT_REQUEST = "LoginPs3Cert";
+    private static final String LOGIN_PS3_REMOTE_AUTH_REQUEST = "LoginRemoteAuth";
+
+    //Result types
     private static final String LOGIN_PS3_CERT_RESULT = "LoginPs3CertResult";
     private static final String LOGIN_REMOTE_AUTH_RESULT = "LoginRemoteAuthResult";
 
@@ -56,10 +61,10 @@ public class AuthResource {
         String requestType = (String)map.get("ns1");
         Response response = null;
         switch(requestType) {
-            case "LoginPs3Cert":
+            case LOGIN_PS3_CERT_REQUEST:
                 response = loginPs3AuthResponse();
                 break;
-            case "LoginRemoteAuth":
+            case LOGIN_PS3_REMOTE_AUTH_REQUEST:
                 response = loginRemoteAuthResponse(map);
         }
         return response;
