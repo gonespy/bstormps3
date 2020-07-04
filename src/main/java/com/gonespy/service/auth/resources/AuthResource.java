@@ -3,6 +3,8 @@ package com.gonespy.service.auth.resources;
 import com.gonespy.service.util.CertificateUtils;
 import com.gonespy.service.util.SoapUtils;
 import io.swagger.annotations.Api;
+import jersey.repackaged.com.google.common.collect.ImmutableMap;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -39,6 +41,13 @@ public class AuthResource {
     private static final String LOGIN_REMOTE_AUTH_RESULT = "LoginRemoteAuthResult";
     private static final String LOGIN_REMOTE_AUTH_RESULT_WITH_GAMEID = "LoginRemoteAuthWithGameIdResult";
 
+    private static final Map<String, String> REQUEST_RESULT_MAP = ImmutableMap.of(
+        LOGIN_PS3_CERT_REQUEST, LOGIN_PS3_CERT_RESULT,
+        LOGIN_PS3_CERT_REQUEST_WITH_GAMEID, LOGIN_PS3_CERT_RESULT_WITH_GAMEID,
+        LOGIN_PS3_REMOTE_AUTH_REQUEST, LOGIN_REMOTE_AUTH_RESULT,
+        LOGIN_PS3_REMOTE_AUTH_REQUEST_WITH_GAMEID, LOGIN_REMOTE_AUTH_RESULT_WITH_GAMEID
+    );
+
     public AuthResource() {
 
     }
@@ -67,22 +76,22 @@ public class AuthResource {
         switch(requestType) {
             case LOGIN_PS3_CERT_REQUEST:
             case LOGIN_PS3_CERT_REQUEST_WITH_GAMEID:
-                response = loginPs3AuthResponse();
+                response = loginPs3AuthResponse(requestType);
                 break;
             case LOGIN_PS3_REMOTE_AUTH_REQUEST:
             case LOGIN_PS3_REMOTE_AUTH_REQUEST_WITH_GAMEID:
-                response = loginRemoteAuthResponse(map);
+                response = loginRemoteAuthResponse(requestType, map);
         }
         return response;
     }
 
-    private Response loginPs3AuthResponse() {
+    private Response loginPs3AuthResponse(String requestType) {
         Map<String,Object> soapData = new LinkedHashMap<>();
         soapData.put("responseCode", "0");
         soapData.put("authToken", DUMMY_AUTH_TOKEN);
         soapData.put("partnerChallenge", DUMMY_PARTNER_CHALLENGE);
 
-        String response = generateSoapResponse(LOGIN_PS3_CERT_RESULT, soapData);
+        String response = generateSoapResponse(REQUEST_RESULT_MAP.get(requestType), soapData);
         LOG.info("RESPONSE:");
         LOG.info(response);
         return Response.status(Response.Status.OK)
@@ -90,7 +99,7 @@ public class AuthResource {
                 .build();
     }
 
-    private Response loginRemoteAuthResponse(Map<String, Object> inputData) {
+    private Response loginRemoteAuthResponse(String requestType, Map<String, Object> inputData) {
         LOG.warn("WARNING: game uses remote auth login which does not work!");
 
         Map<String,Object> soapData = new LinkedHashMap<>();
@@ -101,7 +110,7 @@ public class AuthResource {
         );
         soapData.put("peerkeyprivate", PEER_KEY_PRIVATE);
 
-        String response = generateSoapResponse(LOGIN_REMOTE_AUTH_RESULT, soapData);
+        String response = generateSoapResponse(REQUEST_RESULT_MAP.get(requestType), soapData);
         LOG.info("RESPONSE:");
         LOG.info(response);
         return Response.status(Response.Status.OK)
