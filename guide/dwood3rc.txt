@@ -17,3 +17,5 @@ cache_file = "dw_cache_bin"
 # 224.x.x.x, or 0.0.x.x range.  If using Deadwood to resolve names
 # on an internal network, uncomment the following line:
 filter_rfc1918 = 0
+
+# end of file
